@@ -35,6 +35,7 @@ var zan = {
     audio:[],
     iphone_link:'https://itunes.apple.com/app/apple-store/id1090811540?pt=618432&ct=sharepage&mt=8',
     android_link:'http://cootek-walkie-talkie.cdn.cootekservice.com/android/andes/version/andes.apk',
+    isZan:false,
     getUser:function(){
         return GetQueryString('uid');
     },
@@ -42,6 +43,7 @@ var zan = {
         $.ajax({
             type:"POST",
             data:JSON.stringify({'uid':''}),
+            async:false,
             dataType:"json",
             url:"http://andes.cootekservice.com/andes/collectlike/liker_info",
             success:zan.getZanInfoCallback
@@ -52,30 +54,38 @@ var zan = {
             return;
         var liker_list=data.result;
         for(index in liker_list){
-            if(index>3)
-                break;
-            $('.people-list').append("<div class='people-detail'>" +
-                                            "<div class='detail-inside'>" +
-                                                "<div class='photo block fleft'><img src='"+liker_list[index].headimgurl+"'></div>" +
-                                                "<p class='nickname'>"+liker_list[index].nickname+"</p>" +
-                                                "<p class='intro-word'>手好快啊，果然是真爱</p>" +
-                                                "</div>" +
-                                        "</div>");
+            if(index<=3) {
+                $('.people-list').append(
+                    "<div class='people-detail'>" +
+                        "<div class='detail-inside'>" +
+                            "<div class='photo block fleft'><img src='" + liker_list[index].headimgurl + "'></div>" +
+                            "<p class='nickname'>" + liker_list[index].nickname + "</p>" +
+                            "<p class='intro-word'>手好快啊，果然是真爱</p>" +
+                        "</div>" +
+                    "</div>");
+            }
+            else{
+                $('.people-list').append(
+                    "<div class='people-detail hide'>" +
+                        "<div class='detail-inside'>" +
+                            "<div class='photo block fleft'><img src='" + liker_list[index].headimgurl + "'></div>" +
+                            "<p class='nickname'>" + liker_list[index].nickname + "</p>" +
+                            "<p class='intro-word'>手好快啊，果然是真爱</p>" +
+                        "</div>" +
+                    "</div>");
+            }
+            if(liker_list[index].openid==user_info.openid){
+                zan.isZan=true;
+                $('.zan-btn').text('我也要玩');
+                $('.zan-btn').fastClick(zan.downloadClick);
+            }
         }
         var offset=$('.arrow').position().top-window.innerHeight;
         window.onscroll = function(){
             if(document.body.scrollTop>=offset+20) {
-                for(index in liker_list){
-                    if(index<=3)
-                        continue;
-                    $('.people-list').append("<div class='people-detail'>" +
-                                                    "<div class='detail-inside'>" +
-                                                        "<div class='photo block fleft'><img src='"+liker_list[index].headimgurl+"'></div>" +
-                                                        "<p class='nickname'>"+liker_list[index].nickname+"</p>" +
-                                                        "<p class='intro-word'>手好快啊，果然是真爱</p>" +
-                                                    "</div>" +
-                                                "</div>");
-                }
+                for(index in liker_list)
+                    $(".people-detail").removeClass('hide');
+                $('.scroll-tip').hide();
             }
         };
     },
@@ -102,6 +112,9 @@ var zan = {
         }
     },
     zanClick:function(){
+        if(!zan.isZan){
+
+        }
         //$.ajax({
         //    type:"POST",
         //    data:JSON.stringify({ 'uid': zan.getUser(),
@@ -116,6 +129,7 @@ var zan = {
         $('body').css('overflow','hidden');
     },
     zanClickCallback:function(data){
+        zan.isZan=true;
 
     },
     closeClick:function(){
@@ -132,6 +146,7 @@ var zan = {
 (function(){
     window.onload = function() {
         FastClick.attach(document.body);
+        zan.getZanInfo();
     };
     //if(typeof(user_info)!="undefined")
         $('.zan-btn').fastClick(zan.zanClick);

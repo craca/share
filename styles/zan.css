@@ -1,4 +1,3 @@
-
 html {
     -webkit-user-select: none;
     font-family: 'Helvetica Neue',Helvetica,Arial,'Microsoft YaHei',sans-serif;
@@ -266,13 +265,17 @@ body{
     border-radius:1.2rem;
 }
 .num-tip{
-    font-size: 0.6rem;
-    margin-top: 8px;
-    letter-spacing: 1px;
-    color: #1E93B1;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    color: #1d8aa7;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 373px;
 }
 .num-tip>span{
-    color: #BB15AD;
+    color: #ff007e;
     font-size: 0.8rem;
     font-weight: bold;
 }
