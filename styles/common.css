@@ -1,0 +1,455 @@
+html {
+    -webkit-user-select: none;
+    font-family: 'Helvetica Neue',Helvetica,Arial,'Microsoft YaHei',sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 125%;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    width:100%;
+    height:100%;
+}
+body{
+    /*font-family: "Microsoft YaHei";*/
+    font-size: 0.8rem;
+    padding:0;
+    max-width:650px;
+    margin:auto;
+    height: 100%;
+    overflow:hidden
+}
+.top-tip {
+    box-shadow: 0px 2px 5px #E4E4E4;
+    border-radius: 20rem/4.3rem;
+    height: 4.7rem;
+    margin-top: -1.8rem;
+    text-align: center;
+}
+.top-tip>p {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 1.55rem;
+    font-size: 0.7rem;
+    /* width: 6.5rem; */
+    letter-spacing: -1px;
+}
+.container{
+    margin-top:0.55rem;
+}
+.bg{
+    background-color: white;
+}
+.bg-white{
+    background-color: white;
+    position:absolute;
+    width:200%;
+    height:200%;
+    z-index:100
+}
+.round-border1{
+    -moz-border-radius: 1.1rem;      /* Gecko browsers */
+    -webkit-border-radius: 1.1rem;   /* Webkit browsers */
+    border-radius:1.1rem;            /* W3C syntax */
+}
+.round-border2{
+    -moz-border-radius: 30px;      /* Gecko browsers */
+    -webkit-border-radius: 30px;   /* Webkit browsers */
+    border-radius:30px;            /* W3C syntax */
+}
+.round-border3{
+    -moz-border-radius: 1.2rem;      /* Gecko browsers */
+    -webkit-border-radius: 1.2rem;   /* Webkit browsers */
+    border-radius:1.2rem;            /* W3C syntax */
+}
+.round-border4{
+    -moz-border-radius: 0.2rem;      /* Gecko browsers */
+    -webkit-border-radius: 0.2rem;   /* Webkit browsers */
+    border-radius:0.2rem;            /* W3C syntax */
+}
+.icon{
+    width: 8rem;
+    float: right;
+    margin-right: 1rem;
+}
+h3{
+    margin:0;
+}
+h2 {
+    position: absolute;
+    top: 0.25rem;
+    left: 0;
+    font-size: 1rem;
+    right: 0;
+    color: #a3db61;
+}
+h1{
+    margin-bottom:1.8rem;
+    margin-top: 1rem;
+}
+p{
+    margin:0;
+    color: #4E4E4E;
+    font-size:0.8rem
+}
+.btn{
+    background-color: #8f8f8f;
+    display:block;
+    width:100%;
+    height:58px;
+    font-size: 0.7rem;
+    line-height:58px;
+    color:white;
+    text-align: center;;
+}
+.download-btn {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    background-color: white;
+    color: #ff653c;
+    text-decoration: none;
+    width: 11rem;
+    margin: auto;
+    border: 1px solid #ff653c;
+}
+.download-btn-sm {
+    position: absolute;
+    width: 3.8rem;
+    height: 1.5rem;
+    top: 0.7rem;
+    right: 1rem;
+    line-height: 1.5rem;
+    background-color: #ff653c;
+    text-decoration: none;
+    color: #FFF5FF;
+    font-size: 0.7rem;
+    display: none;
+}
+#black-opacity{
+    background-color: black;
+    opacity:0.7;
+    width:100%;
+    left:0;
+    top:0;
+    height:100%;
+    position:fixed;
+    z-index:8;
+    display:none;
+    color:white;
+    text-align: center;
+    padding-top:200px
+}
+#browser-tip {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    display: none;
+    color: white;
+    text-align: center;
+}
+#invite-panel {
+    /* padding: 1.5rem 1.2rem 2.5rem 1.3rem; */
+    left: 0;
+    right: 0;
+    top: 4.8rem;
+    margin: auto;
+    position: absolute;
+    z-index: 10;
+    /* text-align: center; */
+    background-color: white;
+    display: none;
+    width: 13.5rem;
+    height: 13rem;
+}
+#invite-panel b{
+    font-size:0.75rem;
+}
+#invite-panel>img{
+    position: absolute;
+    margin-top: 0.3rem;
+    margin-left: 0.1rem;
+    width: 1.2rem;
+}
+#invite-under-panel {
+    width: 16rem;
+    position: absolute;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 4.8rem;
+    margin: auto;
+    margin-top: -1rem;
+    display: none;
+}
+#invite-under-panel>img{
+    width: 16rem;
+    height: 15.5rem;
+}
+#invite-panel p {
+    font-size: 0.65rem;
+    margin-top: 0.9rem;
+    line-height: 1.8rem;
+    text-align: center;
+    color: #404040;
+    letter-spacing: -0.2px;
+}
+#invite-panel p img{
+    margin-bottom: -0.6rem;
+    width: 1.8rem;
+}
+.open-link{
+    text-decoration: underline;
+    margin:auto;
+}
+.neil-field {
+    position: absolute;
+    z-index: 6;
+    margin: auto;
+    width: 13rem;
+    left: 0;
+    right: 0;
+    margin-top: 0.5rem;
+    color: #F1F5F1;
+}
+.neil-field>span{
+    font-size: 0.5rem;
+    margin-left: 0.4rem;
+    margin-top: -0.2rem;
+}
+.neil {
+    width: 0.4rem;
+    height: 0.38rem;
+    border-radius: 0.2rem;
+    background-color: white;
+    box-shadow: 0 1px 2px #8AA58B;
+}
+.photo-panel{
+    width: 10.25rem;
+    height: 10.25rem;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 4.8rem;
+    z-index: 5;
+    border-radius: 5.15rem;
+    border: 1px solid #C4EAA8;
+}
+.photo-panel-sm {
+    width: 7.6rem;
+    height: 7.6rem;
+    border-radius: 3.8rem;
+    border: 1px solid #E7FFE2;
+    margin: auto;
+    margin-top: 1.25rem;
+}
+.head-photo {
+    width: 5.8rem;
+    height: 5.8rem;
+    margin: auto;
+    -moz-border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    border-radius: 3rem;
+    overflow: hidden;
+    border: 1.5px solid white;
+    text-align-all: center;
+    margin-top: 0.7rem;
+}
+.head-photo>img{
+    width:5.8rem;
+}
+.invite-container {
+    height: 19.3rem;
+    width: 14.2rem;
+    margin: auto;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0px 2px 10px #C1C1C1;
+    overflow: hidden;
+    margin-top: 1.2rem;
+}
+.inviter-panel {
+    background-color: #a1dd5c;
+    height: 14.8rem;
+}
+.invite-btn {
+    /* margin-top: 3rem; */
+    background-color: #ff653c;
+    display: block;
+    width: 9.5rem;
+    height: 2.2rem;
+    font-size: 0.8rem;
+    line-height: 2.2rem;
+    color: white;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+    margin-top: 1.2rem;
+}
+.invalid-btn{
+    /* margin-top: 3rem; */
+    background-color: #AFAFAF;
+    display: block;
+    width: 9.5rem;
+    height: 2.2rem;
+    font-size: 0.8rem;
+    line-height: 2.2rem;
+    color: white;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+    margin-top: 1.2rem;
+}
+.invite-code {
+    background-color: #ff653c;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    width: 11rem;
+    margin: auto;
+    color: white;
+    font-size: 0.8rem;
+}
+.nickname{
+    display:inline-block;
+    width:12rem;
+    font-size: 0.8rem;
+    margin:auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.invite-word{
+    font-size: 0.7rem;
+}
+.inviter-inside {
+    width:14rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin:auto;
+    margin-top: 12.1rem;
+    color: #F6FBF4;
+}
+.app-intro{
+    text-decoration: underline;
+    color: #8f8f8f;
+    font-size:0.6rem;
+    margin:0.3rem auto;
+}
+.fright{
+    float:right;
+}
+.fleft{
+    float:left;
+}
+.block{
+    display:block;
+}
+text{
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select:text;
+}
+.notCenter{
+    text-align: left;
+}
+.copyright {
+    text-align: center;
+    margin: auto;
+    margin-top: 0.65rem;
+    font-size: 0.5rem;
+    letter-spacing: -0.6px;
+    color: #979797;
+    line-height: 0.65rem;
+}
+/*download bar*/
+.download-div {
+    position: relative;
+    width: 100%;
+    height: 6rem;
+    top: 0;
+    left: 0;
+    z-index: 85;
+    background-color: #fafafa;
+    display: -webkit-box;
+    border-bottom: solid 1px #f2f2f2;
+    box-shadow: 0px 0px 6px gray;
+    display:none;
+}
+
+.andes-icon {
+    width: 6rem;
+    background: url(../images/andes_icon.png) no-repeat;
+    background-size: 4rem;
+    background-position: 1rem;
+}
+
+.andes-text {
+    -webkit-box-flex: 1;
+    font-size: 0.7rem;
+    margin: 1rem;
+    width: 10rem;
+}
+
+.andes-name {
+    padding-top: .3rem;
+}
+
+.gray {
+    color: #a4a4a4;
+    padding-top: .5rem;
+}
+
+.andes-btn-div {
+    -webkit-box-flex: 2;
+    margin: 1.5rem 1rem 1.5rem 0rem;
+    text-align: -webkit-right;
+}
+
+.andes-btn {
+    background-color: #8bc34a;
+    border-radius: .5rem;
+    width: 100%;
+    font-size: 0.7rem;
+    line-height: 3rem;
+    text-align: center;
+    color: #fff;
+}
+
+.andes-btn:active {
+    background-color: gray;
+}
+/*download bar end*/
+.hide{
+    display:none;
+}
+.other-photo img{
+    width:2rem
+}
+.other-photo>div{
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid white;
+    position: absolute;
+    overflow: hidden;
+}
+.other-photo1 {
+    top: 0.8rem;
+    right: 1.6rem;
+}
+.other-photo2{
+    top: 110px;
+    left: 4px;
+}
+.other-photo3{
+    top: 136px;
+    right: 11px;
+}
+#group-name{
+    font-size:0.9rem
+}

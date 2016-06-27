@@ -1,0 +1,278 @@
+
+html {
+    -webkit-user-select: none;
+    font-family: 'Helvetica Neue',Helvetica,Arial,'Microsoft YaHei',sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 125%;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    width:100%;
+    height:100%;
+}
+body{
+    font-size: 0.8rem;
+    padding:0;
+    max-width:650px;
+    margin:auto;
+    width:100%;
+    background-color: #23A4C5;
+}
+
+.btn{
+    background-color: #8f8f8f;
+    display:block;
+    width:100%;
+    height:58px;
+    font-size: 0.7rem;
+    line-height:58px;
+    color:white;
+    text-align: center;
+}
+.fleft{
+    float:left;
+}
+.fright{
+    float:right;
+}
+.block{
+    display:block;
+}
+.center{
+    margin:auto
+}
+.inline{
+    display:inline-block;
+}
+.bg-div{
+
+}
+.bg-image{
+    width:100%;
+}
+.inside-block{
+    position:absolute;
+    width:14.5rem;
+    z-index: 5;
+    top:0;
+    left:0;
+    right:0;
+    margin:auto;
+    margin-top:13rem;
+    text-align: center;
+}
+.zan-btn{
+    width: 12rem;
+    margin: auto;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    -webkit-border-radius:1.25rem;
+    -moz-border-radius:1.25rem;
+    border-radius:1.25rem;
+    background-color: #FE653C;
+    box-shadow: 0px 3px 1px #B85439;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: 'SimHei';
+    letter-spacing: 2px;
+}
+.audio-group{
+    font-size: 0;
+    margin-bottom: 1.2rem;
+}
+@font-face {
+    /* font-properties */
+    font-family: Andes_Icon2;
+    src:url('./Andes_Icon2.ttf');
+}
+.audio {
+    width: 4rem;
+    height: 4rem;
+    background-color: #BFBFBF;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    font-family: Andes_Icon2;
+    color:white;
+    line-height: 4rem;
+}
+.audio-stop{
+    font-size:1rem;
+    position: absolute;
+    margin-left: -4rem;
+    width:4rem;
+    height:4rem;
+    background-color: #4E4E4E;
+    opacity:0.5;
+}
+.audio-play{
+    font-size:1rem;
+    position: absolute;
+    margin-left: -4rem;
+    width:4rem;
+    height:4rem;
+}
+.audio>img{
+    width:100%;
+    height:100%;
+}
+.people-list{
+    margin:auto;
+}
+.people-detail{
+    border-bottom:1px solid #7DB8DE;
+}
+.detail-inside{
+    margin:0.4rem 0;
+}
+.photo{
+    margin-left:0.8rem;
+    width:1.5rem;
+    height:1.5rem;
+    -webkit-border-radius:1rem;
+    -moz-border-radius:1rem;
+    border-radius:1rem;
+    overflow: hidden;
+    margin-right:10px;
+}
+.photo>img{
+    width:100%;
+    height:100%;
+}
+.nickname{
+    font-size: 0.7rem;
+    color: #D9EFFD;
+}
+.intro-word{
+    font-size: 0.5rem;
+    color: #D9EFFD;
+    letter-spacing: 1px;
+}
+.scroll-tip{
+    text-align: center;
+    margin-top: 8px;
+    font-size: 0.6rem;
+    color: #D9EFFD;
+}
+.arrow{
+    font-family:Andes_Icon2;
+    transform:rotate(45deg);
+    border-right:2px solid white;
+    border-bottom:2px solid white;
+    margin:auto;
+    width:0.4rem;
+    height:0.4rem;
+    margin-top:6px;
+}
+.copyright{
+    color:#1A6A80;
+    font-size:0.5rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.download-bar{
+    position:fixed;
+    top:0;
+    width:100%;
+    max-width:650px;
+    height:3rem;
+    font-size:0.7rem;
+    z-index: 6;
+}
+.opacity-div{
+    width:100%;
+    height:100%;
+    position:absolute;
+    background-color: white;
+    opacity:0.8;
+    z-index:-1;
+}
+.andes-icon{
+    width:2rem;
+    margin-left: 0.3rem;
+    margin-right: 0.6rem;
+}
+.download-btn{
+    margin-top: 0.75rem;
+    height: 1.5rem;
+    background-color: #FF653C;
+    line-height: 1.5rem;
+    margin-right: 0.8rem;
+    width: 3.8rem;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    color:white;
+    text-align: center;
+}
+.black-opacity{
+    background-color: black;
+    opacity:0.7;
+    width:100%;
+    left:0;
+    top:0;
+    height:100%;
+    position:fixed;
+    z-index:8;
+    display:none;
+}
+.download-panel{
+    position: fixed;
+    top: 6rem;
+    width: 14rem;
+    height: 10rem;
+    margin: auto;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 8;
+    text-align: center;
+    -webkit-border-radius:0.6rem;
+    -moz-border-radius:0.6rem;
+    border-radius:0.6rem;
+    display:none;
+}
+.close{
+    width: 1.5rem;
+    margin-top: 7px;
+    margin-right: 7px;
+}
+.yeah-icon{
+    width: 8.5rem;
+    height: 7.6rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -4.5rem;
+}
+.download-panel-tip1{
+    margin-top: 3.2rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    opacity: 0.7;
+}
+.download-panel-tip2{
+    font-size: 0.7rem;
+    opacity: 0.78;
+}
+.download-btn-lg{
+    margin: auto;
+    margin-top: 1.6rem;
+    width: 8.8rem;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    -webkit-border-radius:1.2rem;
+    -moz-border-radius:1.2rem;
+    border-radius:1.2rem;
+}
+.num-tip{
+    font-size: 0.6rem;
+    margin-top: 8px;
+    letter-spacing: 1px;
+    color: #1E93B1;
+}
+.num-tip>span{
+    color: #BB15AD;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
