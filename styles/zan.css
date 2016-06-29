@@ -16,7 +16,15 @@ body{
     width:100%;
     background-color: #23A4C5;
 }
-
+.white-bg{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:10;
+    background-color:white;
+}
 .btn{
     background-color: #8f8f8f;
     display:block;
@@ -42,8 +50,8 @@ body{
 .inline{
     display:inline-block;
 }
-.bg-div{
-
+.hide{
+    display:none;
 }
 .bg-image{
     width:100%;
@@ -81,7 +89,7 @@ body{
 @font-face {
     /* font-properties */
     font-family: Andes_Icon2;
-    src:url('./Andes_Icon2.ttf');
+    src:url('/andesres/css/lib/Andes_Icon2.ttf');
 }
 .audio {
     width: 4rem;
@@ -94,7 +102,7 @@ body{
     line-height: 4rem;
 }
 .audio-stop{
-    font-size:1rem;
+    font-size:1.25rem;
     position: absolute;
     margin-left: -4rem;
     width:4rem;
@@ -103,7 +111,7 @@ body{
     opacity:0.5;
 }
 .audio-play{
-    font-size:1rem;
+    font-size:1.25rem;
     position: absolute;
     margin-left: -4rem;
     width:4rem;
@@ -121,11 +129,12 @@ body{
 }
 .detail-inside{
     margin:0.4rem 0;
+    height:1.8rem;
 }
 .photo{
     margin-left:0.8rem;
-    width:1.5rem;
-    height:1.5rem;
+    width:1.8rem;
+    height:1.8rem;
     -webkit-border-radius:1rem;
     -moz-border-radius:1rem;
     border-radius:1rem;
@@ -139,11 +148,13 @@ body{
 .nickname{
     font-size: 0.7rem;
     color: #D9EFFD;
+    line-height: 1rem;
 }
 .intro-word{
     font-size: 0.5rem;
     color: #D9EFFD;
     letter-spacing: 1px;
+    line-height: 1rem;
 }
 .scroll-tip{
     text-align: center;
@@ -165,7 +176,7 @@ body{
     color:#1A6A80;
     font-size:0.5rem;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 .download-bar{
     position:fixed;
@@ -272,7 +283,7 @@ body{
     left: 0;
     right: 0;
     margin: auto;
-    top: 373px;
+    top: 8.1rem;
 }
 .num-tip>span{
     color: #ff007e;

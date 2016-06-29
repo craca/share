@@ -195,5 +195,22 @@ var Andes = {
                 callback(data);
             });
         }
+    },
+    showShareOnlyWechat: function(title, content, useShortUrl, contentImageUrl, url, imageUrl, shareFrom, callback) {
+        if (this.handler) {
+            var params = {
+                'title': title,
+                'content': content,
+                'useShortUrl': useShortUrl,
+                'contentImageUrl': contentImageUrl,
+                'url': url,
+                'imageUrl': imageUrl,
+                'sharefrom':shareFrom,
+                'approachs': ['wechat','timeline']
+            };
+            this.handler.callHandler('showShare', params, function (data) {
+                callback(data);
+            });
+        }
     }
 };

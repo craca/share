@@ -64,14 +64,14 @@ var share={
     groupInfo:{},
     chatRecord:{},
     downloadLink:"",
-    url:'http://docker-ws2.cootekservice.com/andes/oauth_share.html',
+    url:Andes.netService+'/andes/oauth_share.html',
     test_num_f:2,//好友分享文案数量
     test_num_g:2,//群分享文案数量
     share_title_f: ['电话要被颠覆了，你还不知道？'],
     share_desc_f: ['邀请你成为我的BiBi好友，体验纯净高效的新沟通方式！'],
     share_title_g: ['邀请你加入BiBi群'],
     share_desc_g: ['我正在这儿和大家BiBi，同时支持20人的群对讲通话，想嗨你就来！'],
-    share_image: 'http://andes.cootekservice.com/andesres/image/andes/andes_icon.png',
+    share_image: Andes.netService+'/andesres/image/andes/andes_icon.png',
     inviteFriendClick:function(){
         //if(this.id=='inviteFriendBtn')
         //    _hmt.push(['_trackEvent', '邀请页面', '接收邀请', '同意加为好友']);
