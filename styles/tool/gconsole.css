@@ -1,0 +1,85 @@
+.action-panel {
+    text-align: right;
+    margin-top: 1rem;
+}
+
+#select-type {
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+#search-btn {
+    margin-right: 2rem;
+    width: 8rem;
+} 
+#new-btn {
+    margin-right: 2rem;
+    width: 8rem;
+}
+
+.show-div {
+    border: 1px solid green;
+    margin: 1rem;
+}
+
+.base-info {
+}
+
+.base-item {
+    margin: .5rem 0rem;
+}
+
+.column {
+    color: green;
+    margin: .5rem 1rem;
+}
+
+.show-info {
+    border-top: 1px solid green;
+}
+
+#show-item {
+    margin: .5rem 0rem;
+}
+
+#show-info-title {
+    color: green;
+    margin: .5rem 1rem;
+}
+
+.edit-div {
+    border: 1px solid red;
+    margin: 1rem;
+}
+
+input[type='text'] {
+    width: 20rem;
+}
+
+.edit-show-info {
+    border-top: 1px solid green;
+}
+
+#base-info-update {
+    position: absolute;
+    right: 0;
+    margin-right: 2rem; 
+}
+
+#sub-item-update {
+    position: absolute;
+    right: 0;
+    margin-right: 2rem; 
+}
+
+#base-info-delete {
+    position: absolute;
+    right: 0;
+    margin-right: 8rem; 
+}
+
+#sub-item-delete {
+    position: absolute;
+    right: 0;
+    margin-right: 8rem; 
+}

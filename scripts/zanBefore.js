@@ -48,16 +48,14 @@ var zanBefore =  {
             data:JSON.stringify({'uid':uid}),
             async:false,
             dataType:"json",
-            url:Andes.netService+"/andes/collectlike/liker_info",
+            url:'http://183.136.223.43:30007'+"/andes/collectlike/liker_info",
             success:function(data){
                 var liker_list=data.result;
-                if(liker_list.length<10)
-                    $('.num-tip>span').text("0"+liker_list.length);
-                else
-                    $('.num-tip>span').text(liker_list.length);
+                $('.num-tip>span').text(liker_list.length);
             }
         });
         $('.inviteBtn').fastClick(function() {
+            _hmt.push(['_trackEvent', 'APP内集赞分享页面', '点赞按钮', '召唤好友 解锁表情']);
             if (!isIOS) {
                 Andes.showShare(self.shareTitle, self.shareContent, self.shareSMSAndroidUrl, self.shareSMSAndroidUrl, self.shareCopyAndroidUrl, self.shareImageUrl, 'ZAN_SHARE', null);
             } else {
@@ -69,7 +67,7 @@ var zanBefore =  {
 (function(){
     window.onload = function() {
         FastClick.attach(document.body);
-        //$("body").get(0).addEventListener('touchmove',function(event){event.preventDefault()});
+        $("body").get(0).addEventListener('touchmove',function(event){event.preventDefault()});
     };
     zanBefore.init();
 })();

@@ -89,7 +89,7 @@ body{
 @font-face {
     /* font-properties */
     font-family: Andes_Icon2;
-    src:url('./Andes_Icon2.ttf');
+    src:url('/andesres/css/lib/Andes_Icon2.ttf');
 }
 .audio {
     width: 4rem;
@@ -252,11 +252,12 @@ body{
 }
 .yeah-icon{
     width: 7rem;
+    height: 6rem;
     position: absolute;
     left: 0;
     right: 0;
     margin: auto;
-    top: -4.4rem;
+    top: -3.8rem;
 }
 .download-panel-tip1{
     margin-top: 3rem;

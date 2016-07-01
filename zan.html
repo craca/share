@@ -3,10 +3,10 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" type="text/css" href="./styles/base.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/lib/base.css"/>
     <link rel="stylesheet" type="text/css" href="./styles/zan.css"/>
+    <link rel="prefetch" href="http://cootek-walkie-talkie.oss-cn-hangzhou.aliyuncs.com/html/music/h5_chaomengtongsheng.mp3" />
 <body>
-    <div class="white-bg"></div>
     <div class="black-opacity"></div>
     <div class="download-panel">
         <img class="yeah-icon" src="images/zan/yeah.png">
@@ -15,24 +15,30 @@
         <span class="download-panel-tip2 block">来BiBi和我一起疯狂吧~</span>
         <div class="download-btn download-btn-lg">免费下载</div>
     </div>
-    <img class="bg-image block" src="images/zan/集赞分享切图.png">
+    <img class="bg-image block" src="http://img1.imgtn.bdimg.com/it/u=3385063422,3675447893&fm=15&gp=0.jpg">
     <div class="inside-block">
         <div class="audio-group">
-            <div id='audio1' data-id=1 class='audio inline'>
+            <div id='audio1' data-id=0 class='audio inline'>
                 <img src='images/zan/chaomengtongsheng.jpg'><span class='audio-stop'>2</span>
-                <audio src='http://cootek-walkie-talkie.oss-cn-hangzhou.aliyuncs.com/ios/andes/voice_emotion/5/cs_chaomengtongsheng.wav' preload></audio>
+                <audio preload>
+                    <source data-url="http://cootek-walkie-talkie.oss-cn-hangzhou.aliyuncs.com/html/music/h5_chaomengtongsheng.mp3" src="" type="audio/mpeg">
+                </audio>
             </div>
-            <div id="audio2" data-id=2 class="audio inline">
+            <div id="audio2" data-id=1 class="audio inline">
                 <img src="images/zan/192.jpg"><span class="audio-stop">2</span>
-                <audio src="http://cootek-walkie-talkie.oss-cn-hangzhou.aliyuncs.com/ios/andes/voice_emotion/5/cs_zhilinjiejie.wav" preload></audio>
+                <audio preload>
+                    <source src="http://cootek-walkie-talkie.oss-cn-hangzhou.aliyuncs.com/html/music/h5_zhilinjiejie.mp3" type="audio/mpeg">
+                </audio>
             </div>
-            <div id="audio3" data-id=3 class="audio inline">
+            <div id="audio3" data-id=2 class="audio inline">
                 <img src="images/zan/192.2.jpg"><span class="audio-stop">2</span>
-                <audio src="http://cootek-walkie-talkie.oss-cn-hangzhou.aliyuncs.com/ios/andes/voice_emotion/5/cs_xuezhiqian.wav" preload></audio>
+                <audio preload>
+                    <source src="http://cootek-walkie-talkie.oss-cn-hangzhou.aliyuncs.com/html/music/h5_xuezhiqian.mp3" type="audio/mpeg">
+                </audio>
             </div>
         </div>
-        <div class="btn zan-btn">赞一下</div>
-        <p class="num-tip">已经有<span>09</span>人帮TA点赞</p>
+        <div class="btn zan-btn"></div>
+        <p class="num-tip">已经有<span>0</span>人点赞</p>
     </div>
     <div class="people-list">
     </div>
@@ -42,10 +48,10 @@
     </div>
     <div class="download-bar">
         <div class="opacity-div"></div>
-        <div style="display: inline-block;vertical-align: middle;width: 10rem;padding: 0.5rem;">
+        <div style="display: inline-block;vertical-align: middle;width: 10rem;padding: 0.4rem;">
             <img class="andes-icon fleft" src="images/zan/andes144.png">
-            <span style="font-size: 0.8rem;margin:1px 0" class="block">BiBi</span>
-            <span style="opacity:0.7" class="block">声音的另一种玩法</span>
+            <span style="font-size: 0.7rem;margin:1px 0;" class="block">BiBi</span>
+            <span style="opacity:0.7;font-size: 0.65rem;" class="block">声音的另一种玩法</span>
         </div>
         <div class="download-btn fright">立即下载</div>
     </div>
@@ -59,6 +65,13 @@
     <script src="./scripts/vendor/fastclick_ftlabs.js"></script>
     <script src="./scripts/wechat_share.js"></script>
     <script src="./scripts/andes.js"></script>
+    <script>
+        var user_info={
+            headimgurl:"http://wx.qlogo.cn/mmopen/2YqpZlI0wpGRM0v4iae9kryC8U6FElzibvAUoI5ia1BHbZcEamrBXvB6sRnI7hcHrz7O9SS1pGegicLfChf4kq4rzoM00QOlzeGo/0",
+            nickname:"\u6211\u662f\u0054\u006f\u006e\u0079\u8001\u5e08\ud83e\udd17",
+            openid:"oePrfvlIi-soJ-NifSA6uxN3koJc"
+        };
+    </script>
     <script src="scripts/zan.js"></script>
 </footer>
 </html>

@@ -5,19 +5,443 @@
     <title>Title</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" type="text/css" href="./styles/base.css"/>
-    <link rel="stylesheet" type="text/css" href="./styles/sound_wall.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/lib/base.css"/>
+    <link rel="stylesheet" type="text/css" href="./styles/andes/sound_wall.css"/>
+
 </head>
 <body>
-<div class="ios-div ">
-    <div class="ios-show-info">
-        <div class="ios-show-top-text">上传功能正在玩命开发中，很快您的BiBi故事就可以与大家分享了，敬请期待</div>
-        <div class="ios-show-bottom">
-            <span class="ios-show-cancel">取消</span>
-            <span class="ios-show-thumb">点赞</span>
+<div class="upload-div display-none">
+    <div class="show-info">
+        <div class="show-top-text">上传功能正在玩命开发中，很快您的BiBi故事就可以与大家分享了，敬请期待。</div>
+        <div class="show-bottom">
+            <span class="show-cancel">取消</span>
+            <span class="show-thumb">点赞</span>
         </div>
     </div>
 </div>
-
+<div class="sound-list-top-box">
+    <div class="sound-list-item box display-none" id="sound_top_item_tpl">
+        <div class="sound-item sound-item-top sound-item-left display-none" data-is-top="1" data-audio="" data-id="" data-title="" data-layout="" data-sub-title="" data-icon="" data-like="" data-user-like="" data-is-new="" data-is-hot="" datat-start-time="" data-duration="">
+            <div class="sound-item-square square-color-1">
+                <span class="hot display-none">HOT</span>
+                <span class="new display-none">NEW</span>
+                <div class="sound-item-bottom-line">
+                    <p>
+                        <span class="sound-item-like">w</span>
+                        <span class="sound-like sound-like-top"></span>
+                    </p><p>
+                </p></div>
+                <div class="sound-play-btn">
+                    <span class="sound-play-btn-icon">4</span>
+                </div>
+            </div>
+            <div class="sound-square-bottom">
+                <span class="sound-name"></span>
+            </div>
+        </div>
+        <div class="space-div"></div>
+        <div class="sound-item sound-item-top sound-item-right display-none" data-is-top="1" data-audio="" data-id="" data-title="" data-layout="" data-sub-title="" data-icon="" data-like="" data-user-like="" data-is-new="" data-is-hot="" datat-start-time="" data-duration="">
+            <div class="sound-item-square square-color-2">
+                <span class="hot display-none">HOT</span>
+                <span class="new display-none">NEW</span>
+                <div class="sound-item-bottom-line">
+                    <p>
+                        <span class="sound-item-like">w</span>
+                        <span class="sound-like sound-like-top"></span>
+                    </p><p>
+                </p></div>
+                <div class="sound-play-btn">
+                    <span class="sound-play-btn-icon">4</span>
+                </div>
+            </div>
+            <div class="sound-square-bottom">
+                <span class="sound-name"></span>
+            </div>
+        </div>
+    </div>
+    <div class="sound-list-item box" id="sound_top_item_tp_0">
+        <div class="sound-item sound-item-top sound-item-left" data-is-top="1" data-audio="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/audio/5done.wav" data-id="6" data-title="老公，你看我可爱吗？" data-layout="square" data-sub-title="匿名内测用户提供" data-icon="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/square1.jpg" data-like="420" data-user-like="false" data-is-new="false" data-is-hot="true" datat-start-time="" data-duration="" id="sound_top_item_0">
+            <div class="sound-item-square square-color-1" style="background-image: url(&quot;http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/square1.jpg&quot;); background-size: cover; background-repeat: no-repeat;">
+                <span class="hot">HOT</span>
+                <span class="new display-none">NEW</span>
+                <div class="sound-item-bottom-line">
+                    <p>
+                        <span class="sound-item-like" data-item-id="sound_top_item_0">w</span>
+                        <span class="sound-like sound-like-top">420</span>
+                    </p><p>
+                </p></div>
+                <div class="sound-play-btn">
+                    <span class="sound-play-btn-icon">4</span>
+                </div>
+            </div>
+            <div class="sound-square-bottom">
+                <span class="sound-name">老公，你看我可爱吗？</span>
+            </div>
+        </div>
+        <div class="space-div"></div>
+        <div class="sound-item sound-item-top sound-item-right" data-is-top="1" data-audio="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/audio/22done.wav" data-id="29" data-title="列车长：火车等等我" data-layout="square" data-sub-title="匿名内测用户提供" data-icon="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/square2.jpg" data-like="312" data-user-like="false" data-is-new="true" data-is-hot="false" datat-start-time="" data-duration="" id="sound_top_item_1">
+            <div class="sound-item-square square-color-2" style="background-image: url(&quot;http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/square2.jpg&quot;); background-size: cover; background-repeat: no-repeat;">
+                <span class="hot display-none">HOT</span>
+                <span class="new">NEW</span>
+                <div class="sound-item-bottom-line">
+                    <p>
+                        <span class="sound-item-like" data-item-id="sound_top_item_1">w</span>
+                        <span class="sound-like sound-like-top">312</span>
+                    </p><p>
+                </p></div>
+                <div class="sound-play-btn">
+                    <span class="sound-play-btn-icon">4</span>
+                </div>
+            </div>
+            <div class="sound-square-bottom">
+                <span class="sound-name">列车长：火车等等我</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sound-list-box">
+    <div class="sound-item display-none" id="sound_item_tpl" data-is-top="0" data-audio="" data-id="" data-title="" data-layout="" data-sub-title="" data-icon="" data-like="" data-user-like="">
+        <div class="sound-basic box">
+            <div class="sound-cover">
+                <div class="sound-play-btn small">
+                    <span class="sound-play-btn-icon small">4</span>
+                </div>
+            </div>
+            <div class="sound-info">
+                <div class="sound-name"></div>
+                <div class="sound-name-sub">匿名内测用户提供</div>
+            </div>
+            <div class="sound-like-div">
+                <p class="sound-like-div-top">
+                    <span class="sound-item-like like-right">w&nbsp;</span>
+                </p>
+                <p class="sound-like-div-bottom">
+                    <span class="sound-like"></span>
+                </p><p>
+            </p></div>
+        </div>
+    </div>
+    <div class="sound-item" id="sound_item_0" data-is-top="0" data-audio="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/audio/14done.wav" data-id="30" data-title="这里有美女，速来" data-layout="list" data-sub-title="匿名内测用户提供" data-icon="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/14.jpg" data-like="480" data-user-like="true">
+        <div class="sound-basic box">
+            <div class="sound-cover cover-custom" style="background-image: url(&quot;http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/14.jpg&quot;); background-size: cover; background-repeat: no-repeat;">
+                <div class="sound-play-btn small">
+                    <span class="sound-play-btn-icon small">4</span>
+                </div>
+            </div>
+            <div class="sound-info">
+                <div class="sound-name">这里有美女，速来</div>
+                <div class="sound-name-sub">匿名内测用户提供</div>
+            </div>
+            <div class="sound-like-div" data-item-id="sound_item_0">
+                <p class="sound-like-div-top">
+                    <span class="sound-item-like like-right user-like" data-item-id="sound_item_0">w&nbsp;</span>
+                </p>
+                <p class="sound-like-div-bottom">
+                    <span class="sound-like">480</span>
+                </p><p>
+            </p></div>
+        </div>
+    </div><div class="sound-item" id="sound_item_1" data-is-top="0" data-audio="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/audio/21done.wav" data-id="31" data-title="程序猿用BiBi的正确姿势" data-layout="list" data-sub-title="匿名内测用户提供" data-icon="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/21.jpg" data-like="276" data-user-like="true">
+    <div class="sound-basic box">
+        <div class="sound-cover cover-custom" style="background-image: url(&quot;http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/21.jpg&quot;); background-size: cover; background-repeat: no-repeat;">
+            <div class="sound-play-btn small">
+                <span class="sound-play-btn-icon small">4</span>
+            </div>
+        </div>
+        <div class="sound-info">
+            <div class="sound-name">程序猿用BiBi的正确姿势</div>
+            <div class="sound-name-sub">匿名内测用户提供</div>
+        </div>
+        <div class="sound-like-div" data-item-id="sound_item_1">
+            <p class="sound-like-div-top">
+                <span class="sound-item-like like-right user-like" data-item-id="sound_item_1">w&nbsp;</span>
+            </p>
+            <p class="sound-like-div-bottom">
+                <span class="sound-like">276</span>
+            </p><p>
+        </p></div>
+    </div>
+</div><div class="sound-item" id="sound_item_2" data-is-top="0" data-audio="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/audio/1done.wav" data-id="23" data-title="球赛直播，边看边侃" data-layout="list" data-sub-title="匿名内测用户提供" data-icon="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/1.jpg" data-like="292" data-user-like="false">
+    <div class="sound-basic box">
+        <div class="sound-cover cover-custom" style="background-image: url(&quot;http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/1.jpg&quot;); background-size: cover; background-repeat: no-repeat;">
+            <div class="sound-play-btn small">
+                <span class="sound-play-btn-icon small">4</span>
+            </div>
+        </div>
+        <div class="sound-info">
+            <div class="sound-name">球赛直播，边看边侃</div>
+            <div class="sound-name-sub">匿名内测用户提供</div>
+        </div>
+        <div class="sound-like-div" data-item-id="sound_item_2">
+            <p class="sound-like-div-top">
+                <span class="sound-item-like like-right" data-item-id="sound_item_2">w&nbsp;</span>
+            </p>
+            <p class="sound-like-div-bottom">
+                <span class="sound-like">292</span>
+            </p><p>
+        </p></div>
+    </div>
+</div><div class="sound-item" id="sound_item_3" data-is-top="0" data-audio="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/audio/16done.wav" data-id="32" data-title="司机：有你们的路上不孤单" data-layout="list" data-sub-title="匿名内测用户提供" data-icon="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/16.jpg" data-like="112" data-user-like="false">
+    <div class="sound-basic box">
+        <div class="sound-cover cover-custom" style="background-image: url(&quot;http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/16.jpg&quot;); background-size: cover; background-repeat: no-repeat;">
+            <div class="sound-play-btn small">
+                <span class="sound-play-btn-icon small">4</span>
+            </div>
+        </div>
+        <div class="sound-info">
+            <div class="sound-name">司机：有你们的路上不孤单</div>
+            <div class="sound-name-sub">匿名内测用户提供</div>
+        </div>
+        <div class="sound-like-div" data-item-id="sound_item_3">
+            <p class="sound-like-div-top">
+                <span class="sound-item-like like-right" data-item-id="sound_item_3">w&nbsp;</span>
+            </p>
+            <p class="sound-like-div-bottom">
+                <span class="sound-like">112</span>
+            </p><p>
+        </p></div>
+    </div>
+</div><div class="sound-item" id="sound_item_4" data-is-top="0" data-audio="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/audio/2done.wav" data-id="24" data-title="老大，先亲哪个？" data-layout="list" data-sub-title="匿名内测用户提供" data-icon="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/2.jpg" data-like="284" data-user-like="false">
+    <div class="sound-basic box">
+        <div class="sound-cover cover-custom" style="background-image: url(&quot;http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/2.jpg&quot;); background-size: cover; background-repeat: no-repeat;">
+            <div class="sound-play-btn small">
+                <span class="sound-play-btn-icon small">4</span>
+            </div>
+        </div>
+        <div class="sound-info">
+            <div class="sound-name">老大，先亲哪个？</div>
+            <div class="sound-name-sub">匿名内测用户提供</div>
+        </div>
+        <div class="sound-like-div" data-item-id="sound_item_4">
+            <p class="sound-like-div-top">
+                <span class="sound-item-like like-right" data-item-id="sound_item_4">w&nbsp;</span>
+            </p>
+            <p class="sound-like-div-bottom">
+                <span class="sound-like">284</span>
+            </p><p>
+        </p></div>
+    </div>
+</div><div class="sound-item" id="sound_item_5" data-is-top="0" data-audio="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/audio/17done.wav" data-id="33" data-title="车队自驾游，再也不怕丢" data-layout="list" data-sub-title="匿名内测用户提供" data-icon="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/17.jpg" data-like="104" data-user-like="false">
+    <div class="sound-basic box">
+        <div class="sound-cover cover-custom" style="background-image: url(&quot;http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/17.jpg&quot;); background-size: cover; background-repeat: no-repeat;">
+            <div class="sound-play-btn small">
+                <span class="sound-play-btn-icon small">4</span>
+            </div>
+        </div>
+        <div class="sound-info">
+            <div class="sound-name">车队自驾游，再也不怕丢</div>
+            <div class="sound-name-sub">匿名内测用户提供</div>
+        </div>
+        <div class="sound-like-div" data-item-id="sound_item_5">
+            <p class="sound-like-div-top">
+                <span class="sound-item-like like-right" data-item-id="sound_item_5">w&nbsp;</span>
+            </p>
+            <p class="sound-like-div-bottom">
+                <span class="sound-like">104</span>
+            </p><p>
+        </p></div>
+    </div>
+</div><div class="sound-item" id="sound_item_6" data-is-top="0" data-audio="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/audio/4done.wav" data-id="25" data-title="我和女友的内涵对话" data-layout="list" data-sub-title="匿名内测用户提供" data-icon="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/4.jpg" data-like="212" data-user-like="false">
+    <div class="sound-basic box">
+        <div class="sound-cover cover-custom" style="background-image: url(&quot;http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/4.jpg&quot;); background-size: cover; background-repeat: no-repeat;">
+            <div class="sound-play-btn small">
+                <span class="sound-play-btn-icon small">4</span>
+            </div>
+        </div>
+        <div class="sound-info">
+            <div class="sound-name">我和女友的内涵对话</div>
+            <div class="sound-name-sub">匿名内测用户提供</div>
+        </div>
+        <div class="sound-like-div" data-item-id="sound_item_6">
+            <p class="sound-like-div-top">
+                <span class="sound-item-like like-right" data-item-id="sound_item_6">w&nbsp;</span>
+            </p>
+            <p class="sound-like-div-bottom">
+                <span class="sound-like">212</span>
+            </p><p>
+        </p></div>
+    </div>
+</div><div class="sound-item" id="sound_item_7" data-is-top="0" data-audio="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/audio/18done.wav" data-id="34" data-title="晚会要开始了……" data-layout="list" data-sub-title="匿名内测用户提供" data-icon="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/18.jpg" data-like="84" data-user-like="false">
+    <div class="sound-basic box">
+        <div class="sound-cover cover-custom" style="background-image: url(&quot;http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/18.jpg&quot;); background-size: cover; background-repeat: no-repeat;">
+            <div class="sound-play-btn small">
+                <span class="sound-play-btn-icon small">4</span>
+            </div>
+        </div>
+        <div class="sound-info">
+            <div class="sound-name">晚会要开始了……</div>
+            <div class="sound-name-sub">匿名内测用户提供</div>
+        </div>
+        <div class="sound-like-div" data-item-id="sound_item_7">
+            <p class="sound-like-div-top">
+                <span class="sound-item-like like-right" data-item-id="sound_item_7">w&nbsp;</span>
+            </p>
+            <p class="sound-like-div-bottom">
+                <span class="sound-like">84</span>
+            </p><p>
+        </p></div>
+    </div>
+</div><div class="sound-item" id="sound_item_8" data-is-top="0" data-audio="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/audio/6done.wav" data-id="5" data-title="老婆，我带你去看豪车" data-layout="list" data-sub-title="匿名内测用户提供" data-icon="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/6.jpg" data-like="282" data-user-like="false">
+    <div class="sound-basic box">
+        <div class="sound-cover cover-custom" style="background-image: url(&quot;http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/6.jpg&quot;); background-size: cover; background-repeat: no-repeat;">
+            <div class="sound-play-btn small">
+                <span class="sound-play-btn-icon small">4</span>
+            </div>
+        </div>
+        <div class="sound-info">
+            <div class="sound-name">老婆，我带你去看豪车</div>
+            <div class="sound-name-sub">匿名内测用户提供</div>
+        </div>
+        <div class="sound-like-div" data-item-id="sound_item_8">
+            <p class="sound-like-div-top">
+                <span class="sound-item-like like-right" data-item-id="sound_item_8">w&nbsp;</span>
+            </p>
+            <p class="sound-like-div-bottom">
+                <span class="sound-like">282</span>
+            </p><p>
+        </p></div>
+    </div>
+</div><div class="sound-item" id="sound_item_9" data-is-top="0" data-audio="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/audio/9done.wav" data-id="35" data-title="码农的梦想" data-layout="list" data-sub-title="匿名内测用户提供" data-icon="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/9.jpg" data-like="96" data-user-like="false">
+    <div class="sound-basic box">
+        <div class="sound-cover cover-custom" style="background-image: url(&quot;http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/9.jpg&quot;); background-size: cover; background-repeat: no-repeat;">
+            <div class="sound-play-btn small">
+                <span class="sound-play-btn-icon small">4</span>
+            </div>
+        </div>
+        <div class="sound-info">
+            <div class="sound-name">码农的梦想</div>
+            <div class="sound-name-sub">匿名内测用户提供</div>
+        </div>
+        <div class="sound-like-div" data-item-id="sound_item_9">
+            <p class="sound-like-div-top">
+                <span class="sound-item-like like-right" data-item-id="sound_item_9">w&nbsp;</span>
+            </p>
+            <p class="sound-like-div-bottom">
+                <span class="sound-like">96</span>
+            </p><p>
+        </p></div>
+    </div>
+</div><div class="sound-item" id="sound_item_10" data-is-top="0" data-audio="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/audio/19done.wav" data-id="36" data-title="期末考前一晚的寝室夜话" data-layout="list" data-sub-title="匿名内测用户提供" data-icon="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/19.jpg" data-like="88" data-user-like="false">
+    <div class="sound-basic box">
+        <div class="sound-cover cover-custom" style="background-image: url(&quot;http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/19.jpg&quot;); background-size: cover; background-repeat: no-repeat;">
+            <div class="sound-play-btn small">
+                <span class="sound-play-btn-icon small">4</span>
+            </div>
+        </div>
+        <div class="sound-info">
+            <div class="sound-name">期末考前一晚的寝室夜话</div>
+            <div class="sound-name-sub">匿名内测用户提供</div>
+        </div>
+        <div class="sound-like-div" data-item-id="sound_item_10">
+            <p class="sound-like-div-top">
+                <span class="sound-item-like like-right" data-item-id="sound_item_10">w&nbsp;</span>
+            </p>
+            <p class="sound-like-div-bottom">
+                <span class="sound-like">88</span>
+            </p><p>
+        </p></div>
+    </div>
+</div><div class="sound-item" id="sound_item_11" data-is-top="0" data-audio="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/audio/7done.wav" data-id="4" data-title="哪件事让你对自己的无知感到震惊？" data-layout="list" data-sub-title="匿名内测用户提供" data-icon="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/7.jpg" data-like="176" data-user-like="false">
+    <div class="sound-basic box">
+        <div class="sound-cover cover-custom" style="background-image: url(&quot;http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/7.jpg&quot;); background-size: cover; background-repeat: no-repeat;">
+            <div class="sound-play-btn small">
+                <span class="sound-play-btn-icon small">4</span>
+            </div>
+        </div>
+        <div class="sound-info">
+            <div class="sound-name">哪件事让你对自己的无知感到震惊？</div>
+            <div class="sound-name-sub">匿名内测用户提供</div>
+        </div>
+        <div class="sound-like-div" data-item-id="sound_item_11">
+            <p class="sound-like-div-top">
+                <span class="sound-item-like like-right" data-item-id="sound_item_11">w&nbsp;</span>
+            </p>
+            <p class="sound-like-div-bottom">
+                <span class="sound-like">176</span>
+            </p><p>
+        </p></div>
+    </div>
+</div><div class="sound-item" id="sound_item_12" data-is-top="0" data-audio="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/audio/11done.wav" data-id="3" data-title="女神，伞给你用吧" data-layout="list" data-sub-title="匿名内测用户提供" data-icon="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/11.jpg" data-like="180" data-user-like="false">
+    <div class="sound-basic box">
+        <div class="sound-cover cover-custom" style="background-image: url(&quot;http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/11.jpg&quot;); background-size: cover; background-repeat: no-repeat;">
+            <div class="sound-play-btn small">
+                <span class="sound-play-btn-icon small">4</span>
+            </div>
+        </div>
+        <div class="sound-info">
+            <div class="sound-name">女神，伞给你用吧</div>
+            <div class="sound-name-sub">匿名内测用户提供</div>
+        </div>
+        <div class="sound-like-div" data-item-id="sound_item_12">
+            <p class="sound-like-div-top">
+                <span class="sound-item-like like-right" data-item-id="sound_item_12">w&nbsp;</span>
+            </p>
+            <p class="sound-like-div-bottom">
+                <span class="sound-like">180</span>
+            </p><p>
+        </p></div>
+    </div>
+</div><div class="sound-item" id="sound_item_13" data-is-top="0" data-audio="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/audio/12done.wav" data-id="27" data-title="论熔断机制的好处" data-layout="list" data-sub-title="匿名内测用户提供" data-icon="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/12.jpg" data-like="196" data-user-like="false">
+    <div class="sound-basic box">
+        <div class="sound-cover cover-custom" style="background-image: url(&quot;http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/12.jpg&quot;); background-size: cover; background-repeat: no-repeat;">
+            <div class="sound-play-btn small">
+                <span class="sound-play-btn-icon small">4</span>
+            </div>
+        </div>
+        <div class="sound-info">
+            <div class="sound-name">论熔断机制的好处</div>
+            <div class="sound-name-sub">匿名内测用户提供</div>
+        </div>
+        <div class="sound-like-div" data-item-id="sound_item_13">
+            <p class="sound-like-div-top">
+                <span class="sound-item-like like-right" data-item-id="sound_item_13">w&nbsp;</span>
+            </p>
+            <p class="sound-like-div-bottom">
+                <span class="sound-like">196</span>
+            </p><p>
+        </p></div>
+    </div>
+</div><div class="sound-item" id="sound_item_14" data-is-top="0" data-audio="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/audio/15done.wav" data-id="26" data-title="大年三十，一个人值班" data-layout="list" data-sub-title="匿名内测用户提供" data-icon="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/15.jpg" data-like="176" data-user-like="false">
+    <div class="sound-basic box">
+        <div class="sound-cover cover-custom" style="background-image: url(&quot;http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/15.jpg&quot;); background-size: cover; background-repeat: no-repeat;">
+            <div class="sound-play-btn small">
+                <span class="sound-play-btn-icon small">4</span>
+            </div>
+        </div>
+        <div class="sound-info">
+            <div class="sound-name">大年三十，一个人值班</div>
+            <div class="sound-name-sub">匿名内测用户提供</div>
+        </div>
+        <div class="sound-like-div" data-item-id="sound_item_14">
+            <p class="sound-like-div-top">
+                <span class="sound-item-like like-right" data-item-id="sound_item_14">w&nbsp;</span>
+            </p>
+            <p class="sound-like-div-bottom">
+                <span class="sound-like">176</span>
+            </p><p>
+        </p></div>
+    </div>
+</div><div class="sound-item" id="sound_item_15" data-is-top="0" data-audio="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/audio/20done.wav" data-id="28" data-title="保安深夜在小区里巡逻" data-layout="list" data-sub-title="匿名内测用户提供" data-icon="http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/20.jpg" data-like="188" data-user-like="false">
+    <div class="sound-basic box">
+        <div class="sound-cover cover-custom" style="background-image: url(&quot;http://cootek-walkie-talkie.oss.aliyuncs.com/soundwall/images/20.jpg&quot;); background-size: cover; background-repeat: no-repeat;">
+            <div class="sound-play-btn small">
+                <span class="sound-play-btn-icon small">4</span>
+            </div>
+        </div>
+        <div class="sound-info">
+            <div class="sound-name">保安深夜在小区里巡逻</div>
+            <div class="sound-name-sub">匿名内测用户提供</div>
+        </div>
+        <div class="sound-like-div" data-item-id="sound_item_15">
+            <p class="sound-like-div-top">
+                <span class="sound-item-like like-right" data-item-id="sound_item_15">w&nbsp;</span>
+            </p>
+            <p class="sound-like-div-bottom">
+                <span class="sound-like">188</span>
+            </p><p>
+        </p></div>
+    </div>
+</div>
+</div>
 </body>
 </html>

@@ -74,27 +74,28 @@ function getHostDevice(){
     return "other";
 }
 remAdjust(20,568,320);
-
 var zan = {
     audio:[],
     iphone_link:'http://a.app.qq.com/o/simple.jsp?pkgname=com.cootek.walkietalkie',
     android_link:'http://a.app.qq.com/o/simple.jsp?pkgname=com.cootek.walkietalkie',
     isZan:false,
+    isAutoPlay:true,
+    timeout:null,
+    length:0,
     share_image: Andes.netService+'/andesres/image/andes/andes_icon.png',
-    share_title:'电话要被颠覆了，你还不知道？',
-    share_desc:'邀请你成为我的BiBi好友，体验纯净高效的新沟通方式！',
-    url:Andes.netService+"/andes/liker_collect.html",
+    share_title:'我想玩这个，快来帮我一下！',
+    share_desc:'BiBi的语音表情超好玩，快帮我解锁，来和我一起玩儿！',
+    people_words:["手够快吧，果然是真爱！","我这么善良，你知道吗？","快送我一朵小红花！","点赞功德无量！","送人一赞，手留余香","听说好人都来玩BiBi了","语音表情现在很火啊，你还不知道？"],
+    word_num:7,
+    url:'http://docker-ws2.cootekservice.com'+"/andes/liker_collect.html",
     getUid:function(){
         return GetQueryString('uid');
     },
     getZanInfo:function(){
-        if(WechatShare.isWeixin()&&location.href.indexOf('appid')<0){
-            location.href=zan.makeWechatUrl();
-            return;
-        }
         $.ajax({
             type:"POST",
             data:JSON.stringify({'uid':zan.getUid()}),
+            async:false,
             dataType:"json",
             url:"http://183.136.223.43:30007/andes/collectlike/liker_info",
             success:zan.getZanInfoCallback
@@ -104,98 +105,91 @@ var zan = {
         if(data.result_code!=2000)
             return;
         var liker_list=data.result;
-        if(liker_list.length>4)
+        zan.length=liker_list.length;
+        if(liker_list.length>4) {
             $('.scroll-tip').removeClass('hide');
-        if(liker_list.length<10)
-            $('.num-tip>span').text("0"+liker_list.length);
-        else
-            $('.num-tip>span').text(liker_list.length);
+            $('.people-list').addClass('people-list-scroll');
+        }
+        //    window.onscroll = function(){
+        //        var offset=$('.arrow').position().top-window.innerHeight;
+        //        if(document.body.scrollTop>=offset+40) {
+        //            setTimeout(function(){
+        //                $(".people-detail").removeClass('hide');
+        //                $('.scroll-tip').hide();
+        //            },300)
+        //        }
+        //    };
+        //}
+        $('.num-tip>span').text(liker_list.length);
         liker_list.reverse();
         for(index in liker_list){
-            if(index<=3) {
-                $('.people-list').append(
-                    "<div class='people-detail'>" +
-                    "<div class='detail-inside'>" +
-                    "<div class='photo block fleft'><img src='" + liker_list[index].headimgurl + "'></div>" +
-                    "<p class='nickname'>" + decodeUTF8(liker_list[index].nickname) + "</p>" +
-                    "<p class='intro-word'>手好快啊，果然是真爱</p>" +
-                    "</div>" +
-                    "</div>");
-            }
-            else{
-                $('.people-list').append(
-                    "<div class='people-detail hide'>" +
-                    "<div class='detail-inside'>" +
-                    "<div class='photo block fleft'><img src='" + liker_list[index].headimgurl + "'></div>" +
-                    "<p class='nickname'>" + decodeUTF8(liker_list[index].nickname) + "</p>" +
-                    "<p class='intro-word'>手好快啊，果然是真爱</p>" +
-                    "</div>" +
-                    "</div>");
-            }
-            var user_info={
-                headimgurl:"http://wx.qlogo.cn/mmopen/2YqpZlI0wpGRM0v4iae9kryC8U6FElzibvAUoI5ia1BHbZcEamrBXvB6sRnI7hcHrz7O9SS1pGegicLfChf4kq4rzoM00QOlzeGo/0",
-                nickname:"我是Tony老师",
-                openid:"oePrfvlIi-soJ-NifSA6uxN3koJc2"
-            };
+            $('.people-list').append(
+                "<div class='people-detail'>" +
+                "<div class='detail-inside'>" +
+                "<div class='photo block fleft'><img src='" + liker_list[index].headimgurl + "'></div>" +
+                "<p class='nickname'>" + decodeUTF8(liker_list[index].nickname) + "</p>" +
+                "<p class='intro-word'>"+zan.people_words[Math.floor(Math.random()*zan.word_num)]+"</p>" +
+                "</div>" +
+                "</div>");
             if(liker_list[index].openid==user_info.openid){
                 zan.isZan=true;
                 $('.zan-btn').text('我也要玩');
                 $('.zan-btn').fastClick(zan.downloadClick);
             }
         }
-        if(zan.isZan){
-            $('.zan-btn').text('我也要玩');
-            $('.zan-btn').fastClick(zan.downloadClick);
-        }
-        else
+        if(!zan.isZan) {
+            $('.zan-btn').text('赞一下');
             $('.zan-btn').fastClick(zan.zanClick);
-        var offset=$('.arrow').position().top-window.innerHeight;
-        window.onscroll = function(){
-            if(document.body.scrollTop>=offset+40) {
-                setTimeout(function(){
-                    $(".people-detail").removeClass('hide');
-                    $('.scroll-tip').hide();
-                },300)
-            }
-        };
+        }
         $('.white-bg').hide();
         $('body').css("height","inherit");
         $('body').css("overflow","inherit");
     },
     audioPlayClick:function(){
+        clearTimeout(zan.timeout);
+        $('body').unbind('touchstart');
         var id=$(this).data('id');
         var self=this;
-        if($(this).find('audio').get(0).paused) {//点击后播放
-            $('.audio').find('audio').get(0).pause();
-            $('.audio').find('audio').get(1).pause();
-            $('.audio').find('audio').get(2).pause();
-            $('.audio').find('span').text('2');
-            $('.audio').find('span').removeClass('audio-play');
-            $('.audio').find('span').addClass('audio-stop');
-            $(this).find('audio').get(0).play();
-            $(this).find('span').text('3');
-            $(this).find('span').removeClass('audio-stop');
-            $(this).find('span').addClass('audio-play');
-            $(this).find('audio').get(0).addEventListener('ended', function () {
-                $(self).find('audio').get(0).pause();
-                $(self).find('span').text('2');
-                $(self).find('span').removeClass('audio-play');
-                $(self).find('span').addClass('audio-stop');
-            }, false);
-        }
-        else {
-            $(this).find('audio').get(0).pause();
-            $(this).find('span').text('2');
-            $(this).find('span').removeClass('audio-play');
-            $(this).find('span').addClass('audio-stop');
-        }
+        zan.isAutoPlay=false;
+        if($(this).find('audio').get(0).paused) //点击后播放
+            zan.audioPlay(id);
+        else
+            zan.audioStop();
+    },
+    audioPlay:function(id){
+        zan.audioStop();
+        $('audio').eq(id).get(0).play();
+        if($('audio').eq(id).get(0).paused)
+            return;
+        $('.audio').find('span').text('2');
+        $('.audio').find('span').removeClass('audio-play');
+        $('.audio').find('span').addClass('audio-stop');
+        $('.audio').find('span').eq(id).text('3');
+        $('.audio').find('span').eq(id).removeClass('audio-stop');
+        $('.audio').find('span').eq(id).addClass('audio-play');
+    },
+    audioStop:function(){
+        $('audio').get(0).pause();
+        $('audio').get(1).pause();
+        $('audio').get(2).pause();
+        $('.audio').find('span').text('2');
+        $('.audio').find('span').removeClass('audio-play');
+        $('.audio').find('span').addClass('audio-stop');
+    },
+    audioAutoPlayLoop:function(){
+        $('audio>source').eq(0).attr('src',$('audio>source').eq(0).data('url'));
+        zan.audioPlay(0);
+        var id=0;alert()
+        $('audio').bind('ended', function () {
+            zan.audioStop(id);
+            if(zan.isAutoPlay){
+                if(id>1)
+                    id=-1;
+                zan.audioPlay(++id);
+            }
+        });
     },
     zanClick:function(){
-        var user_info={
-            headimgurl:"http://wx.qlogo.cn/mmopen/2YqpZlI0wpGRM0v4iae9kryC8U6FElzibvAUoI5ia1BHbZcEamrBXvB6sRnI7hcHrz7O9SS1pGegicLfChf4kq4rzoM00QOlzeGo/0",
-            nickname:"\u6211\u662f\u0054\u006f\u006e\u0079\u8001\u5e08\ud83e\udd17",
-            openid:"oePrfvlIi-soJ-NifSA6uxN3koJc"
-        };
         $.ajax({
             type:"POST",
             async:"false",
@@ -212,10 +206,22 @@ var zan = {
     zanClickCallback:function(data){
         if(data.result_code!=2000)
             return;
+        //_hmt.push(['_trackEvent', '集赞分享页面', '点赞按钮',  '赞一下']);
         zan.isZan=true;
+        $('.num-tip').text(zan.length+1);
+        $('.people-list').prepend("<div class='people-detail'>" +
+            "<div class='detail-inside'>" +
+            "<div class='photo block fleft'><img src='" + user_info.headimgurl + "'></div>" +
+            "<p class='nickname'>" + decodeUTF8(user_info.nickname) + "</p>" +
+            "<p class='intro-word'>"+zan.people_words[Math.floor(Math.random()*zan.word_num)]+"</p>" +
+            "</div>" +
+            "</div>");
+        if($('.people-list').find('hide').size()>0)
+            $('.people-list').find('.people-detail').eq(4).addClass('hide');
         $('.download-panel,.black-opacity').show();
         $('body').css('overflow','hidden');
         $('.zan-btn').text('我也要玩');
+        $('.zan-btn').attr('id','zan-download');
         $('.zan-btn').fastClick(zan.downloadClick);
     },
     closeClick:function(){
@@ -227,24 +233,41 @@ var zan = {
             window.open(zan.iphone_link);
         else
             window.open(zan.android_link);
+        //if($(this).attr('id')=='center-download')
+        //    _hmt.push(['_trackEvent', '集赞分享页面', '下载按钮', '弹出框下载']);
+        //if($(this).attr('id')=='top-download')
+        //    _hmt.push(['_trackEvent', '集赞分享页面', '下载按钮', '顶部栏下载']);
+        //if($(this).attr('id')=='zan-download')
+        //    _hmt.push(['_trackEvent', '集赞分享页面', '下载按钮', '我也要玩']);
     },
     makeWechatUrl:function(){
-        var uri=zan.url+"?uid="+zan.getUid()+"&appid="+INFO.appId;
-        var target="1#1#"+uri;
-        target=base64_encode(target);
-        redirect_url = 'http://touchlife.cootekservice.com/callback/wechat?target='+target;
-        return 'https://open.weixin.qq.com/connect/oauth2/authorize?appid='+INFO.appId+'&redirect_uri='+redirect_url+'&response_type=code&scope=snsapi_userinfo#wechat_redirect';
+        //var uri=zan.url+"?uid="+zan.getUid()+"&appid="+INFO.appId;
+       // var target="1#1#"+uri;
+        //target=base64_encode(target);
+        //redirect_url = 'http://touchlife.cootekservice.com/callback/wechat?target='+target;
+        //return 'https://open.weixin.qq.com/connect/oauth2/authorize?appid='+INFO.appId+'&redirect_uri='+redirect_url+'&response_type=code&scope=snsapi_userinfo#wechat_redirect';
     }
 };
 (function(){
+    if(WechatShare.isWeixin()&&location.href.indexOf('appid')<0){
+        location.href=zan.makeWechatUrl();
+        return;
+    }
     window.onload = function() {
         FastClick.attach(document.body);
         if (WechatShare.isWeixin()) {
             WechatShare.config(INFO.appId, INFO.timestamp, INFO.noncestr, INFO.signature, zan.share_title, zan.share_desc, zan.makeWechatUrl(), zan.share_image);
         }
+        zan.audioAutoPlayLoop();
+        if($('audio').get(0).paused){
+            $('body').bind('touchstart',function(){
+                zan.timeout=setTimeout(zan.audioAutoPlayLoop,200);
+                $('body').unbind('touchstart');
+            })
+        }
         zan.getZanInfo();
     };
     $('.audio').fastClick(zan.audioPlayClick);
     $('.close').fastClick(zan.closeClick);
-    $('.download-btn').fastClick(zan.downloadClick);zan.zanClick();
+    $('.download-btn').fastClick(zan.downloadClick);
 })();

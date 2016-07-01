@@ -1,0 +1,273 @@
+html, body, #content {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    background: url(/andesres/image/invite/invite_choose_bg.jpg) no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: andesfont1;
+    src: url('/andesres/image/andes/Andes_Icon1.ttf?v1.0');
+}
+
+.swing-div {
+    position: absolute;
+    top: 0;
+    width: 5rem;
+    height: 13rem;
+    animation-delay: 0.8s;
+    -wekit-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+    margin-top: -2rem;
+    opacity: 0.5;
+}
+
+.lover-div {
+    left: 5rem;
+    background: url(/andesres/image/invite/lover.png) no-repeat;
+    background-size: 100%;
+}
+
+.friend-div {
+    left: 45%;
+    background: url(/andesres/image/invite/friends.png) no-repeat;
+    background-size: 100%;
+}
+
+.parent-div {
+    right: 5rem;
+    background: url(/andesres/image/invite/parents.png) no-repeat;
+    background-size: 100%;
+}
+
+.active-title {
+    opacity: 1;
+    margin-top: 0;
+    /*-webkit-animation-name: moveTitle;
+    -webkit-animation-direction: normal;
+    -webkit-animation-duration: 500ms;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-iteration-count: infinite;*/
+}
+
+@-webkit-keyframes moveTitle {
+    0% {
+        opacity: 0.5;
+        margin-top: -2rem;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+.top-div {
+    width: 100%;
+    height: 12rem;
+}
+
+.slide-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide-wrapper {
+    display: -webkit-box;
+}
+
+.slider {
+    width: 70%;
+    height: 36rem;
+    margin: 1rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 20px #bcbcbc;
+    -webkit-box-shadow: 0px 0px 20px #bcbcbc;
+}
+
+.slider-back {
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+}
+
+.slide-pager {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.slide-dot {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 100%;
+    background: black;
+    opacity: 0.2;
+}
+
+.slide-dot-active {
+    opacity: 0.5;
+}
+
+.slide-lover {
+    background: url(/andesres/image/invite/lover.jpg) no-repeat;
+    background-size: 100%;
+}
+
+.slide-friend {
+    background: url(/andesres/image/invite/friends.jpg) no-repeat;
+    background-size: 100%;
+}
+
+.slide-parent {
+    background: url(/andesres/image/invite/parents.jpg) no-repeat;
+    background-size: 100%;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    z-index: 999;
+}
+
+.sound-icon-btn {
+    text-align: right;
+}
+
+.sound-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+.sound-disable {
+    background: gray;
+    opacity: .5;
+}
+
+.sound-scale-ani{
+    animation:sound-scale 2s ease-in-out 0s 2;
+    -webkit-animation:sound-scale 2s ease-in-out 0s 2;
+}
+
+@keyframes sound-scale {
+    0% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(-1);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@-webkit-keyframes sound-scale {
+    0% {
+        -webkit-transform: scaleX(1);
+    }
+    50% {
+        -webkit-transform: scaleX(-1);
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+    }
+}
+
+.btn-left {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    left: 5%;
+}
+
+.btn-right {
+    right: 5%;
+}
+
+.slider-btn-icon {
+    font-family: andesfont1;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0px 0px 10px #A0A0A0;
+}
+
+.invite-btn {
+    position: relative;
+    top:24rem;
+    border-radius: 5rem;
+    background-color: #8bc34a;
+    width: 20rem;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    line-height: 5rem;
+}
+
+.ta {
+    width: 4rem;
+    height: 3.5rem;
+    vertical-align: middle;
+    margin-top: -0.6rem;
+}
+
+.swing{
+    -webkit-animation:swinging 10s ease-in-out 0s infinite;
+    -moz-animation:swinging 10s ease-in-out 0s infinite;
+    animation:swinging 10s ease-in-out 0s infinite;
+    -webkit-transform-origin:50% 0;
+    -moz-transform-origin:50% 0;
+    transform-origin:50% 0;
+}
+
+@-webkit-keyframes swinging{
+    0% { -webkit-transform: rotate(0); }
+    5% { -webkit-transform: rotate(10deg); }
+    10% { -webkit-transform: rotate(-9deg); }
+    15% { -webkit-transform: rotate(8deg); }
+    20% { -webkit-transform: rotate(-7deg); }
+    25% { -webkit-transform: rotate(6deg); }
+    30% { -webkit-transform: rotate(-5deg); }
+    35% { -webkit-transform: rotate(4deg); }
+    40% { -webkit-transform: rotate(-3deg); }
+    45% { -webkit-transform: rotate(2deg); }
+    50% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(0deg); }
+}
+
+@-moz-keyframes swinging{
+    0% { -moz-transform: rotate(0); }
+    5% { -moz-transform: rotate(10deg); }
+    10% { -moz-transform: rotate(-9deg); }
+    15% { -moz-transform: rotate(8deg); }
+    20% { -moz-transform: rotate(-7deg); }
+    25% { -moz-transform: rotate(6deg); }
+    30% { -moz-transform: rotate(-5deg); }
+    35% { -moz-transform: rotate(4deg); }
+    40% { -moz-transform: rotate(-3deg); }
+    45% { -moz-transform: rotate(2deg); }
+    50% { -moz-transform: rotate(0deg); }
+    100% { -moz-transform: rotate(0deg); }
+}
+
+@keyframes swinging{
+    0% { transform: rotate(0); }
+    5% { transform: rotate(10deg); }
+    10% { transform: rotate(-9deg); }
+    15% { transform: rotate(8deg); }
+    20% { transform: rotate(-7deg); }
+    25% { transform: rotate(6deg); }
+    30% { transform: rotate(-5deg); }
+    35% { transform: rotate(4deg); }
+    40% { transform: rotate(-3deg); }
+    45% { transform: rotate(2deg); }
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}

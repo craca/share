@@ -1,0 +1,48 @@
+.input-div {
+    display: block;
+}
+
+.input-txt {
+    display: block;
+    width: 100%;
+    height: 10rem;
+}
+
+.search {
+    display: block;
+    margin: 1rem auto;
+    width: 5rem;
+}
+
+.result-div {
+    width: 100%;
+}
+
+.row {
+}
+
+.column {
+}
+
+
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+th, td
+{
+   border: 1px solid #b5d6e6;
+   font-size: 12px;
+   font-weight: normal;
+   text-align: center;
+   vertical-align: middle;
+   height: 20px;
+}
+th
+{
+  background-color: Gray;
+}   

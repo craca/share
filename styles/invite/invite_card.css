@@ -1,0 +1,169 @@
+html, body, #content {
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: andesfont1;
+    src: url('/andesres/image/andes/Andes_Icon1.ttf?v1.0');
+}
+
+.font-icon {
+    font-family: andesfont1;
+    margin-right: 5px;
+}
+
+.display-none {
+    display: none;
+}
+
+.top-div {
+    width: 90%;
+    height: 52rem;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 20px gray;
+    -webkit-box-shadow: 0px 0px 20px #bcbcbc;
+}
+
+.top-div-large {
+    height: 58rem;
+}
+
+.img-bg {
+    width: 100%;
+}
+
+.top-img {
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.ta {
+    width: 4rem;
+    height: 3.5rem;
+    vertical-align: middle;
+    margin-top: -0.6rem;
+}
+
+.invite-btn-div {
+    position: relative;
+    top: 2rem;
+    width: 100%;
+}
+
+.invite-btn {
+    border-radius: 5rem;
+    background-color: #8bc34a;
+    width: 24rem;
+    height: 5rem;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    line-height: 5rem;
+}
+
+.invite-btn-other {
+    border-radius: 5rem;
+    background-color: #ffc107;
+    width: 24rem;
+    margin: 2rem auto;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    line-height: 5rem;
+}
+
+.invite-div {
+    background-color: #8bc34a;
+    width: 100%;
+}
+
+.desc-div {
+    color: white;
+    margin: 0rem 3rem;
+    padding-bottom: 2rem;
+}
+
+.desc-div p {
+    font-size: 12px;
+    padding-top: 1rem;
+}
+
+.breathe-btn{ 
+    border-width: 0px;
+    border-style: solid;
+    border-color: #8bc34a;
+    -webkit-box-shadow:0 0px 2px #8bc34a; 
+    overflow:hidden; 
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-name: breathe;
+    -webkit-animation-duration: 1000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+}
+
+@-webkit-keyframes breathe {
+    0% { 
+        opacity: .8; 
+        -webkit-box-shadow:0 0px 2px #8bc34a;
+        }
+    100% { 
+        opacity: 1; 
+        -webkit-box-shadow:0 0px 30px #8bc34a;
+    }
+}
+
+.invite-his {
+    margin-top: 1rem;
+    width: 100%;
+    color: #8bc34a;
+    text-align: center;
+    font-size: 14px;
+}
+
+.invite-his span {
+}
+
+.invite-data {
+    padding-top: 1rem;
+    width: 100%;
+    color: white;
+}
+
+.invite-data-sum {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.invite-table {
+    width: 100%;
+    font-size: 12px;
+}
+
+.invite-row {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    padding: .5rem 0;
+}
+
+.invite-column {
+    display: -webkit-box;
+}
+
+.column-content {
+    width: 10rem;
+    text-align: -webkit-center;
+}
+
+.column-space {
+    -webkit-box-flex: 1;
+}
+
+

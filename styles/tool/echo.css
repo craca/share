@@ -1,0 +1,43 @@
+.parent-tag-item {
+    margin: .5rem 1rem;
+    border: 1px solid #8bc34a;
+}
+
+.parent-base-info {
+    padding: .5rem 1rem;
+    border-bottom: 1px solid #8bc34a;
+}
+
+.base-info {
+    padding: .5rem 2rem;
+}
+
+.insert-btn {
+    width: 5rem;
+    margin-left: 5rem;
+}
+
+.del-btn {
+    width: 5rem;
+    margin-left: 2rem;
+}
+
+.update-btn {
+    width: 5rem;
+    margin-left: 2rem;
+}
+
+.save-btn {
+    width: 5rem;
+    margin-left: 2rem;
+}
+
+.insert-new-btn {
+    width: 5rem;
+    margin: 1rem;
+}
+
+.update-source-btn {
+    width: 5rem;
+    margin: 1rem;
+}

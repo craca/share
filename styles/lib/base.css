@@ -179,7 +179,14 @@ div::-webkit-scrollbar {
     src: url('/res/image/iconfont.ttf?ver=0.1');
     
 }
-
+@font-face {
+    font-family: Andes_Icon1;
+    src:url('../Andes_Icon1.ttf');
+}
+@font-face {
+    font-family: Andes_Icon2;
+    src:url('../Andes_Icon2.ttf');
+}
 /*default font and fall back font*/
 html {
     font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
