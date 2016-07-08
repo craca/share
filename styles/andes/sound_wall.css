@@ -120,37 +120,38 @@ body {
 
 .sound-play-btn {
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 50%;
-    width: 3rem;
-    height: 3rem;
-    line-height: 3rem;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
     margin: -1.5rem;
-    border-radius: 3rem;
-    font-size: 2rem;
+    border-radius: 36px;
     background-color: rgba(0,0,0, 0.4);
     text-align: center;
-    border: 1px solid #fff;
 }
 
 
 .sound-play-btn.small{
-    width: 2rem;
-    height: 2rem;
-    line-height: 1.5rem;
+    width: 24px;
+    height: 22px;
+    line-height: 24px;
     margin: -1rem;
 }
 
 .sound-play-btn-icon {
-    font-family: andesfont2;
+    font-family: Andes_iOS2;
+    font-size: 42px;
+    position: absolute;
+    left: -2.8px;
     color: #fff;
-    margin-left: 2px;
-    font-size: 1.5rem;
+    margin-top: -1px;
 }
 
 .sound-play-btn-icon.small {
-    font-size: 1rem;
-    margin-left: 2px;
+    font-size: 28px;
+    left: -2.2px;
+    margin-top: -1px;
 }
 
 .sound-play-circle {
@@ -457,7 +458,7 @@ body {
 
 .show-info {
     background-color: #fafafa;
-    width: 75%;
+    width: 73%;
     display: block;
     margin: auto;
     margin-top:10rem;
@@ -466,8 +467,10 @@ body {
 }
 
 .show-top-text {
-    padding: 2rem;
-    font-size: 1.4rem;
+    padding: 2.8rem 2.1rem;
+    font-size: 1.5rem;
+    line-height: 26px;
+    padding-bottom: 2.2rem;
 }
 
 .show-bottom {

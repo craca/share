@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="styles/lib/base.css"/>
+    <link rel="stylesheet" type="text/css" href="./styles/andes/assistant.css"/>
+</head>
+<body>
+<!--<img style="position: absolute;z-index:100" src="images/assistant/AD效果图.png">-->
+    <div class="back-btn hide">返回</div>
+    <div class="black-opacity hide"></div>
+    <div class="top-panel">
+        <span class="back-icon block fleft">1</span>
+        <img src="images/assistant/AD@1x.png">
+        <h1>新手问答Q&A</h1>
+        <h3>点击问题，听BiBi小助手为你解答</h3>
+    </div>
+    <div class="que-panel">
+        <div id="talk" class="left-que">
+            <div class="que-photo fleft circle-radius">?</div>
+            <div class="question question-left fleft">
+                <span class="play-icon block fleft">G</span>实时对讲怎么玩？直播怎么玩？
+            </div>
+        </div>
+        <div id="message" class="right-que">
+            <div class="que-photo fright circle-radius">?</div>
+            <div class="question question-right fright">
+                <span class="play-icon block fright">G</span>不确定TA是否方便，能否留言？
+            </div>
+        </div>
+        <div id="addFriend" class="left-que">
+            <div class="que-photo fleft circle-radius">?</div>
+            <div class="question question-left fleft">
+                <span class="play-icon block fleft">F</span>怎样添加/邀请好友？
+            </div>
+        </div>
+        <div id="findFriend" class="left-que">
+            <div class="que-photo fleft circle-radius">?</div>
+            <div class="question question-left fleft">
+                <span class="play-icon block fleft">F</span>没好友怎么办，在哪能找到人聊？
+            </div>
+        </div>
+        <div id="voiceFace" class="left-que">
+            <div class="que-photo fleft circle-radius">?</div>
+            <div class="question question-left fleft">
+                <span class="play-icon block fleft">F</span>语音表情很好玩，会一直更新吗？
+            </div>
+        </div>
+        <div id="group" class="right-que">
+            <div class="que-photo fright circle-radius">?</div>
+            <div class="question question-right fright">
+                <span class="play-icon block fright">G</span>如何关闭群消息和退群？
+            </div>
+        </div>
+        <div id="suggestion" class="right-que">
+            <div class="que-photo fright circle-radius">?</div>
+            <div class="question question-right fright">
+                <span class="play-icon block fright">F</span>如何联系BiBi团队反馈问题？
+            </div>
+        </div>
+    </div>
+    <div class="tab-panel hide">
+        <div class="friend-tab hide">
+            <div class="black-tab hide" style="height: 2.85rem;"></div>
+            <div class="white-div hide" id="add-friend-div" style="height: 2.7rem;background-color: rgba(0,0,0,0)"></div>
+            <div class="black-tab hide" style="height: 6rem;"></div>
+            <div class="white-div hide" id="choose-friend-div" style="height: 2.7rem;background-color: rgba(0,0,0,0)"></div>
+            <div class="black-tab hide"></div>
+            <img id="add-friend-img" style="top:5.7rem;left: 4rem;" src="images/assistant/问题3（1）.png">
+            <img id="choose-friend-img" style="top: 14.4rem;left: 6rem;width: 5.5rem;" src="images/assistant/问题3（2）.png">
+        </div>
+        <div class="find-tab hide">
+            <div class="black-tab hide" style="height: 2.9rem;"></div>
+            <div class="white-div hide" id="find-div" style="height: 10rem;background-color: rgba(0,0,0,0);"></div>
+            <div class="black-tab hide" id="centerBlack" style="height:30rem"></div>
+            <div class="black-tab hide fleft" style="width: 8rem;height:3.2rem"></div>
+            <div class="black-tab hide fright" style="width: 4.5rem;height:3.2rem"></div>
+            <div class="black-tab hide" style="margin-top:3.2rem"></div>
+            <img id="find-friend-img" style="top: 1.3rem;left: 1rem;" src="images/assistant/问题4（1）.png">
+            <img id="watch-show-img" style="top: 13rem;left: 5rem;width: 8.5rem;" src="images/assistant/问题4（3）.png">
+            <img id="find-tab-img" style="left: 5rem;top: 22.2rem;;width: 6rem;" src="images/assistant/问题4（2）.png">
+        </div>
+        <div class="voiceFace-tab hide">
+            <div class="black-tab hide" id="voiceFaceTopBlack" style="height: 30rem;"></div>
+            <div class="black-tab hide fright" style="width: 13.7rem;height:2.5rem"></div>
+            <div class="black-tab hide" style="margin-top:2.5rem"></div>
+            <img id="more-face-img" style="top: 22.5rem;left: 0.7rem;width:9rem;" src="images/assistant/问题5（1）.png">
+        </div>
+        <div class="group-tab hide">
+            <div class="black-tab hide" style="height: 21.1rem;"></div>
+            <div class="white-div hide" style="background:rgba(0,0,0,0);height: 2.8rem;"></div>
+            <div class="black-tab hide"></div>
+            <img id="delete-group-img" style="top: 17.6rem;left: 0.7rem;width: 8rem;" src="images/assistant/问题6（1）.png">
+        </div>
+        <div class="me-tab hide">
+            <div class="black-tab hide" style="height: 19.7rem;"></div>
+            <div class="white-div hide" style="background:rgba(0,0,0,0);height: 3rem;"></div>
+            <div class="black-tab hide"></div>
+            <img id="suggestion-img" style="top: 19.6rem;left: 0.7rem;width: 10rem;" src="images/assistant/问题7（1）.png">
+        </div>
+    </div>
+    <div class="talk-panel hide">
+        <div class="finger-point circle-radius"></div>
+        <div class="talk-panel-head">
+            <div class="red-point circle-radius"></div>
+            <div style="height: 1.5rem;">
+                <span class="zhibo">e</span>
+                <span class="center-icon circle-radius">
+                    <span id="qunliao" class="hide">M<span style="font-size: 0.6rem;transform: scale(0.98);position: absolute;margin-left: 2px;">群聊</span></span>
+                    h
+                </span>
+                <span class="duijiang duijiang-open circle-radius">h</span>
+                <span class="duijiang-border circle-radius"></span>
+            </div>
+            <div style="margin-top: -2px;"><span class="zhibo-word">直播</span><span class="duijiang-word circle-radius">对讲(开)</span></div>
+        </div>
+        <div class="talk-panel-title">BiBi小助手</div>
+        <div class="push-circle circle-radius push-circle-tosay hide">
+            <div class="microphone">z</div>
+            <div class="microphone-word">点击发起对讲</div>
+        </div>
+        <div class="push-circle circle-radius push-circle-connect hide">
+            <div class="push-circle-connect-border-top circle-radius"></div><div class="push-circle-connect-border-bottom circle-radius"></div>
+            <div class="microphone">z</div><div class="microphone-word">呼叫中请稍后</div>
+        </div>
+        <div class="push-circle circle-radius push-circle-say hide"><div class="push-circle-say-border circle-radius"></div></div>
+        <div class="push-circle-listen-border circle-radius hide"><div class="push-circle circle-radius push-circle-listen"></div></div>
+        <div class="push-circle circle-radius push-circle-record hide">
+            <div class="message">w</div>
+            <div class="microphone-word">长按留言</div>
+        </div>
+        <div class="push-circle circle-radius push-circle-recording hide"></div>
+        <div class="push-circle circle-radius push-circle-pushed hide"></div>
+        <div class="talk-panel-foot">
+            <img class="record-tip hide" src="images/assistant/Group%202@1x.png">
+            <div><span class="bottom-icon">c</span><span class="bottom-icon">i</span><span class="bottom-icon">9</span></div>
+            <div style="margin-top: -5px;"><span class="bottom-icon-word">免提/音量</span><span class="bottom-icon-word">聊天记录</span><span class="bottom-icon-word">语音表情</span></div>
+        </div>
+    </div>
+</body>
+<footer>
+    <script src="./scripts/vendor/zepto.v2.js"></script>
+    <script src="./scripts/vendor/fastclick_ftlabs.js"></script>
+    <script src="./scripts/wechat_share.js"></script>
+    <script src="./scripts/andes.js"></script>
+    <script src="scripts/assistant.js"></script>
+</footer>
+</html>
