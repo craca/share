@@ -24,20 +24,19 @@ body {
     z-index:8;
 }
 .back-btn{
+    font-family: Andes_Icon1;
     color: rgba(255, 255, 255, 0.76);
     border: 1px solid rgba(255, 255, 255, 0.45);
-    width: 2.5rem;
+    width: 1.4rem;
     height: 1.2rem;
     line-height: 1.2rem;
     text-align: center;
     border-radius: 4px;
     font-size: 0.7rem;
-    letter-spacing: 2px;
     right: 1.2rem;
     top: 1rem;
     position: absolute;
     z-index: 15;
-    padding-left: 1px;
 }
 .white-bg{
     width:100%;
@@ -84,7 +83,7 @@ body {
 /*common end*/
 /*main panel block*/
 .back-icon{
-    font-family: Andes_Icon1;
+    font-family: Andes_iOS2;
     line-height: 5.3rem;
     color: #fff;
     width: 0.8rem;
@@ -110,6 +109,13 @@ h1{
 h3{
     font-size: 0.6rem;
     color: #fff;
+    margin-left: -6rem;
+    margin-top:0.2rem;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
 }
 .que-panel{
     padding: 8px 14px;
@@ -136,16 +142,15 @@ h3{
     -moz-border-radius:4px;
     border-radius:4px;
     background-repeat: no-repeat;
-    -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
     padding: 0 0.3rem;
     margin: 0 0.3rem;
 }
 .question-left{
-    background-image: url("../../images/assistant/左@2x.png");
+    background-image: url("/andesres/image/andes/assistant/左@2x.png");
 }
 .question-right{
-    background-image: url("../../images/assistant/右@2x.png");
+    background-image: url("/andesres/image/andes/assistant/右@2x.png");
 }
 .play-icon{
     font-family: Andes_Icon2;
@@ -168,7 +173,6 @@ h3{
     height:100%;
     width:100%;
     background-size: 100%;
-    -webkit-background-size: 100%;
     background-repeat: no-repeat;
 }
 .tab-panel>div>div{
@@ -188,19 +192,19 @@ h3{
     bottom:-3rem;
 }
 .friend-tab{
-    background-image: url(../../images/assistant/问题3.1.png);
+    background-image: url(/andesres/image/andes/assistant/问题3.1.png);
 }
 .find-tab{
-    background-image: url(../../images/assistant/问题4.1.png);
+    background-image: url(/andesres/image/andes/assistant/问题4.1.png);
 }
 .voiceFace-tab{
-    background-image: url(../../images/assistant/问题5.1.png);
+    background-image: url(/andesres/image/andes/assistant/问题5.1.png);
 }
 .group-tab{
-    background-image: url(../../images/assistant/问题6.1.png);
+    background-image: url(/andesres/image/andes/assistant/问题6.1.png);
 }
 .me-tab{
-    background-image: url(../../images/assistant/问题7.1.png);
+    background-image: url(/andesres/image/andes/assistant/问题7.1.png);
 }
 /*tab panel end*/
 /*talk panel block*/
@@ -245,10 +249,13 @@ h3{
     font-size: 0.8rem;
     color: white;
     position: absolute;
-    width: 1.4rem;
-    height: 1.4rem;
-    margin-top: -0.1rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-top: 0;
     line-height: 1.4rem;
+}
+.duijiang>img{
+    width:100%;
 }
 .duijiang-open{
     background-color: #7fd43e;
@@ -260,10 +267,10 @@ h3{
 }
 .duijiang-border{
     position: absolute;
-    width: 1.76rem;
-    height: 1.76rem;
-    right: 2.12rem;
-    margin-top: -0.23rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    right: 2.16rem;
+    margin-top: -0.1rem;
     z-index: -1;
     background: -webkit-linear-gradient(#bdbdbd, #eaeaea,#d0d0d0);
     background: -o-linear-gradient(#bdbdbd, #eaeaea,#d0d0d0);
@@ -330,27 +337,38 @@ h3{
 }
 .push-circle-connect{
     background: none;
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
     box-shadow: none;
+    overflow: hidden;
+    border: none;
+    position: absolute;
+    width: 8.5rem;
+    height:8.5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    border-radius: 5rem;
+    left:0;
+    right:0;
+    margin:auto;
+    margin-top: 0.4rem;
+    margin-bottom: 0.7rem;
+    -webkit-transition: transform 2s;
+    -moz-transition: transform 2s;
+    -ms-transition: transform 2s;
+    -o-transition: transform 2s;
+    transition: transform 2s;
 }
 .push-circle-connect-border-top{
     left: 0;
     right: 0;
     margin: auto;
-    margin-top: -0.25rem;
     position: absolute;
     z-index: -1;
     width: 8.5rem;
     height: 4.25rem;
-    -webkit-border-radius:0;
-    -moz-border-radius:0;
-    border-radius:0;
-    -webkit-border-top-left-radius: 4.25rem;
-    -moz-border-radius-topleft: 4.25rem;
-    border-top-left-radius: 4.25rem;
-    -webkit-border-top-right-radius: 4.25rem;
-    -moz-border-radius-topright: 4.25rem;
-    border-top-right-radius: 4.25rem;
+    -webkit-border-radius: 0rem;
+    -moz-border-radius: 0rem;
+    border-radius: 0rem;
     background-color: #7fd43e;
     background: linear-gradient(to left,#7fd43e, rgba(127, 212, 62, 0.5));
     background: -webkit-linear-gradient(right,#7fd43e, rgba(127, 212, 62, 0.5)); /* Safari 5.1 - 6.0 */
@@ -380,21 +398,15 @@ h3{
     z-index: -1;
     width: 8.5rem;
     height: 4.25rem;
-    -webkit-border-radius:0;
-    -moz-border-radius:0;
-    border-radius:0;
-    -webkit-border-bottom-left-radius: 4.25rem;
-    -moz-border-radius-bottomleft: 4.25rem;
-    border-bottom-left-radius: 4.25rem;
-    -webkit-border-bottom-right-radius: 4.25rem;
-    -moz-border-radius-bottomright: 4.25rem;
-    border-bottom-right-radius: 4.25rem;
+    -webkit-border-radius: 0rem;
+    -moz-border-radius: 0rem;
+    border-radius: 0rem;
     background-color: #7fd43e;
     background: linear-gradient(to left,rgba(127, 212, 62, 0), rgba(127, 212, 62, 0.5));
     background: -webkit-linear-gradient(right,rgba(127, 212, 62, 0), rgba(127, 212, 62, 0.5));
     background: -o-linear-gradient(left,rgba(127, 212, 62, 0), rgba(127, 212, 62, 0.5)); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(left,rgba(127, 212, 62, 0), rgba(127, 212, 62, 0.5)); /* Firefox 3.6 - 15 */
-    margin-top: 4rem;
+    margin-top: 4.25rem;
     -webkit-transform-origin: top;
     -moz-transform-origin: top;
     -o-transform-origin: top;
@@ -412,11 +424,11 @@ h3{
     transition: transform 2s;
 }
 .connect-spin{
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 .push-circle-say{
     background: #7fd43e;
@@ -439,6 +451,20 @@ h3{
     -o-transition: all 0.4s ease-out;
     transition: all 0.4s ease-out;
 }
+.say-border-bigger{
+    -webkit-transform: scale(1.1,1.1);
+    -moz-transform: scale(1.1,1.1);
+    -ms-transform: scale(1.1,1.1);
+    -o-transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1);
+}
+.say-border-origin{
+    -webkit-transform: scale(1,1);
+    -moz-transform: scale(1,1);
+    -ms-transform: scale(1,1);
+    -o-transform: scale(1,1);
+    transform: scale(1,1);
+}
 .push-circle-listen{
     border: 3px solid #7fd43e;
     background: none;
@@ -449,12 +475,13 @@ h3{
     margin-left: -3px;
 }
 .push-circle-listen-border{
-    border: 15px solid #f1f1f1;
+    border: 12px solid #f1f1f1;
     width: 8rem;
     height: 8rem;
     margin: auto;
     margin-top: 0.4rem;
     margin-bottom: 0.7rem;
+    box-shadow: none;
 }
 .push-circle-recording{
     background: none;
@@ -476,6 +503,25 @@ h3{
     line-height: 8rem;
     font-size: 2rem;
     color: #c3c3c3;
+}
+.push-circle-connect-notspin{
+    border-radius: 4rem;
+    width: 8rem;
+    height: 8rem;
+    background-color: #f7f7f7;
+    position: absolute;
+    left:0;
+    right:0;
+    margin: auto;
+    margin-top: 0.6rem;
+}
+.microphone-connect{
+    font-family: Andes_Icon1;
+    line-height: 8rem;
+    font-size: 2rem;
+    color: #c3c3c3;
+    /* transform: scale(0.95); */
+
 }
 .message{
     font-family: Andes_Icon2;
@@ -503,7 +549,7 @@ h3{
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0.4rem;
+    bottom: 0.35rem;
 }
 .record-tip{
     position: absolute;
@@ -540,5 +586,9 @@ h3{
 }
 .finger-point-toClose{
     left: 12rem;
+    top:0.5rem;
+}
+.finger-point-toRightSpace{
+    left:13rem;
 }
 /*talk panel end*/
