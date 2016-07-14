@@ -146,34 +146,32 @@ var assistant = {
     },
     friendTabAnimation:function(){
         var img=new Image();
-        img.src='/andesres/image/andes/assistant/问题3.1.png';
-        img.onload=function(){
-            img.onload=null;
-            $('.friend-tab').css('background-image','url('+img.src+')');
+        img.src='/andesres/image/andes/assistant/iOS/问题3.1.png';
+        img.onload=function() {
+            img.onload = null;
             $('.tab-panel,.friend-tab').show();
-            var t=0;
-            var offset=3000;
-            assistant.friendTabInterval=setInterval(function(){
-                t+=500;
-                if(t==4000-offset)$('.friend-tab>div.black-tab,.back-btn,#friend-tab1').show();
-                if(t==5000-offset)$('#add-friend-img').css('top','24%');
-                if(t==7000-offset)$('#friend-tab2').show();
-                if(t==8000-offset)$('#choose-friend-img').css('top','55%');
-                if(t>=24000)
+            $('.friend-tab').css('background-image', 'url(' + img.src + ')');
+            $('.tab-panel,.friend-tab').show();
+            var t = 0;
+            var offset = 3000;
+            assistant.friendTabInterval = setInterval(function () {
+                t += 500;
+                if (t == 4000 - offset)$('.friend-tab>div.black-tab,.back-btn,#friend-tab1').show();
+                if (t == 5000 - offset)$('#add-friend-img').css('top', '31%');
+                if (t == 7000 - offset)$('#friend-tab2').show();
+                if (t == 8000 - offset)$('#choose-friend-img').css('top', '67%');
+                if (t >= 24000)
                     assistant.backClick();
-            },500);
+            }, 500);
             assistant.intervalArray.push(assistant.friendTabInterval);
         };
-        img.onerror=function(){
-            alert('网络不好~');
-        }
     },
     findTabAnimation:function(){
         var img=new Image();
-        img.src='/andesres/image/andes/assistant/问题4.1.png';
+        img.src='/andesres/image/andes/assistant/iOS/问题4.1.png';
         img.onload=function() {
-            img.onload=null;
-            $('.find-tab').css('background-image','url('+img.src+')');
+            img.onload = null;
+            $('.find-tab').css('background-image', 'url(' + img.src + ')');
             $('.tab-panel,.find-tab').show();
             var t = 0;
             var offset = 2000;
@@ -182,8 +180,8 @@ var assistant = {
                 if (t == 3000 - offset)$('.find-tab>div.black-tab,.back-btn,#find-tab1').show();
                 if (t == 4000 - offset)$('#find-tab-img').css('top', '81%');
                 if (t == 6000 - offset)$('#find-tab2').show();
-                if (t == 7000 - offset)$('#find-friend-img').css('top', '7%');
-                if (t == 8000 - offset)$('#watch-show-img').css('top', '49%');
+                if (t == 7000 - offset)$('#find-friend-img').css('top', '3%');
+                if (t == 8000 - offset)$('#watch-show-img').css('top', '43%');
                 if (t >= 12000)
                     assistant.backClick();
             }, 500);
@@ -192,17 +190,17 @@ var assistant = {
     },
     voiceFaceTabAnimation:function(){
         var img=new Image();
-        img.src='/andesres/image/andes/assistant/问题5.1.png';
+        img.src='/andesres/image/andes/assistant/iOS/问题5.1.png';
         img.onload=function() {
-            img.onload=null;
-            $('.voiceFace-tab').css('background-image','url('+img.src+')');
+            img.onload = null;
+            $('.voiceFace-tab').css('background-image', 'url(' + img.src + ')');
             $('.tab-panel,.voiceFace-tab').show();
             var t = 0;
             var offset = 3000;
             assistant.voiceFaceTabInterval = setInterval(function () {
                 t += 1000;
                 if (t == 4000 - offset)$('.voiceFace-tab>div.black-tab,.back-btn,#voiceFace-tab1').show();
-                if (t == 5000 - offset)$('#more-face-img').css('top', '84%');
+                if (t == 5000 - offset)$('#more-face-img').css('top', '83%');
                 if (t >= 14000)
                     assistant.backClick();
             }, 1000);
@@ -211,50 +209,47 @@ var assistant = {
     },
     groupTabAnimation:function(){
         var img=new Image();
-        img.src='/andesres/image/andes/assistant/问题6.1.png';
+        img.src='/andesres/image/andes/assistant/iOS/问题6.1.png';
         img.onload=function() {
             img.onload = null;
-            $('.group-tab').css('background-image','url('+img.src+')');
-            assistant.circleConnected();
-            assistant.duijiangOpen();
-            $('.red-point').hide();
-            $('.talk-panel,.black-opacity,.center-icon>span,.back-btn').show();
-            var t = 0;
-            var offset = 2000;
-            assistant.groupTabInterval = setInterval(function () {
-                t += 500;
-                if (t == 4000)assistant.fingerPointToCloseTalk();//2s move
-                if (t == 7000)assistant.duijiangClose();
-                if (t == 10000)assistant.fingerPointReset();//2s move
-                if (t == 13000) {
-                    $('.talk-panel,.black-opacity,.back-btn').hide();
-                    $('.tab-panel,.group-tab').show();
-                }
-                if (t == 16000 - offset)$('.group-tab>div.black-tab,.group-tab .white-div,.back-btn').show();
-                if (t == 16500 - offset)$('#delete-group-img').css('top', '64%');
-                if (t >= 19000)
-                    assistant.backClick();
-            }, 500);
-            assistant.intervalArray.push(assistant.groupTabInterval);
-        }
+            $('.group-tab').css('background-image', 'url(' + img.src + ')');
+        };
+        assistant.circleConnected();
+        assistant.duijiangOpen();
+        $('.red-point').hide();
+        $('.talk-panel,.black-opacity,.center-icon>span,.back-btn').show();
+        var t=0;
+        var offset=2000;
+        assistant.groupTabInterval=setInterval(function(){
+            t+=500;
+            if(t==4000)assistant.fingerPointToCloseTalk();//2s move
+            if(t==7000)assistant.duijiangClose();
+            if(t==10000)assistant.fingerPointReset();//2s move
+            if(t==13000){$('.talk-panel,.black-opacity,.back-btn').hide();$('.tab-panel,.group-tab').show();}
+            if(t==16000-offset)$('.group-tab>div.black-tab,.group-tab .white-div,.back-btn').show();
+            if(t==16500-offset)$('#delete-group-img').css('top','69%');
+            if(t>=19000)
+                assistant.backClick();
+        },500);
+        assistant.intervalArray.push(assistant.groupTabInterval);
     },
     meTabAnimation:function(){
         var img=new Image();
-        img.src='/andesres/image/andes/assistant/问题7.1.png';
+        img.src='/andesres/image/andes/assistant/iOS/问题7.1.png';
         img.onload=function() {
             img.onload = null;
-            $('.me-tab').css('background-image','url('+img.src+')');
+            $('.me-tab').css('background-image', 'url(' + img.src + ')');
             $('.tab-panel,.me-tab').show();
             var t = 0;
             assistant.groupTabInterval = setInterval(function () {
                 t += 1000;
                 if (t == 3000 - 2000)$('.me-tab>div.black-tab,.white-div,.back-btn').show();
-                if (t == 4000 - 2000)$('#suggestion-img').css('top', '59%');
+                if (t == 4000 - 2000)$('#suggestion-img').css('top', '62%');
                 if (t == 20000)
                     assistant.backClick();
             }, 1000);
             assistant.intervalArray.push(assistant.groupTabInterval);
-        }
+        };
     },
     duijiangOpen:function(){
        // $('.duijiang').removeClass('duijiang-close').addClass('duijiang-open');
