@@ -54,6 +54,9 @@ var zanBefore =  {
                 $('.num-tip>span').text(liker_list.length);
             }
         });
+        $('.back').fastClick(function(){
+           Andes.finish();
+        });
         $('.inviteBtn').fastClick(function() {
             _hmt.push(['_trackEvent', 'APP内集赞分享页面', '点赞按钮', '召唤好友 解锁表情']);
             if (!isIOS) {

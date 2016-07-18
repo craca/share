@@ -19,7 +19,6 @@ body{
     overflow:hidden;
     text-align:center;
 }
-
 .btn{
     background-color: #8f8f8f;
     display:block;
@@ -47,6 +46,13 @@ body{
 }
 .bg-div{
 
+}
+.title{
+    position: absolute;
+    top:2rem;
+}
+.back{
+    font-family: Andes_Icon1;
 }
 .bg-image{
     width:100%;

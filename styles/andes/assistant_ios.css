@@ -95,6 +95,7 @@ body {
     width: 100%;
     overflow: hidden;
     position: fixed;
+    padding-top:20px;
     top:0;
 }
 .top-panel>img{
@@ -117,7 +118,8 @@ h3{
 }
 .que-panel{
     padding: 8px 14px;
-    padding-top: 5.9rem;
+    margin-top: 5.9rem;
+    padding-top: 20px;
 }
 .que-panel>div{
     height:2.7rem
@@ -219,7 +221,7 @@ h3{
     position:fixed;
     z-index:10;
     width:100%;
-    height: 15.4rem;
+    height: 16rem;
     bottom:0;
     background-color: white;
     font-family: 'Microsoft YaHei';
@@ -233,7 +235,7 @@ h3{
     left: 0;
     width: 100%;
     z-index:9;
-    height:43%;
+    height:45%;
 }
 .red-point{
     position: absolute;
@@ -293,7 +295,11 @@ h3{
     color: white;
     overflow: hidden;
 }
-.center-icon>span:first-child{
+.center-icon>img{
+    width:100%;
+    height:100%;
+}
+.center-icon>span{
     font-size: 0.6rem;
     position: absolute;
     width: 5rem;
@@ -304,7 +310,7 @@ h3{
     right: 0;
     top: 2.4rem;
     margin: auto;
-    display: block;
+    display: none;
     margin-left: -27px;
     margin-top:0.1rem;
 }
@@ -325,8 +331,10 @@ h3{
     background: linear-gradient(white, #e6e6e6);
     box-shadow: 0px 3px 18px #c0c0c0;
     border: 2px solid #e8e8e8;
-    margin-top:0.4rem;
-    margin-bottom: 0.7rem;
+    margin-top:0.8rem;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
 }
 .push-circle-connect{
     background: none;
@@ -338,16 +346,15 @@ h3{
     overflow: hidden;
     border: none;
     position: absolute;
-    width: 9.5rem;
-    height: 9.5rem;
+    width: 9rem;
+    height: 9rem;
     -webkit-border-radius: 5rem;
     -moz-border-radius: 5rem;
     border-radius: 5rem;
     left: 0;
     right: 0;
     margin: auto;
-    margin-top: -0.1rem;
-    margin-bottom: 0.7rem;
+    margin-top: 0.4rem;
     -webkit-transition: transform 2s;
     -moz-transition: transform 2s;
     -ms-transition: transform 2s;
@@ -444,12 +451,12 @@ h3{
     left:0;
     right:0;
     margin: auto;
-    margin-top: 0.4rem;
+    margin-top: 0.9rem;
 }
 .microphone-connect{
     font-family: Andes_iOS2;
     line-height: 8rem;
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #c3c3c3;
     /* transform: scale(0.95); */
 

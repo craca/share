@@ -92,19 +92,20 @@ var assistant = {
         assistant.intervalArray=[];
         assistant.timeoutArray=[];
         $('#centerBlack').css('height','30rem');//find-tab
-        $('.word-img').css('top',document.body.offsetHeight+160);
+        $('.word-img').css('top',document.body.offsetHeight+200);
         $('.back-btn').hide();
         $('.tab-panel>div .white-div,.tab-panel>div').hide();
         $('.black-tab').hide();
         $('#qunliao').hide();
         $('.record-tip').hide();
         $('.talk-panel>.push-circle,.talk-panel,.zhibo-img,.black-opacity,.tab-panel').hide();
+        $('.tab-panel img.hide').hide();
     },
     talkAnimation:function(){
         $('.push-circle-tosay .microphone-word').text('点击发起对讲');
         $('.red-point').show();
         assistant.duijiangOpen();
-        $('.talk-panel-title').text('BiBi小助手').attr('style','');
+        $('.talk-panel-title').text('BiBi豆').attr('style','');
         $('.talk-panel,.black-opacity,.push-circle-tosay').show();
         $('.back-btn').show();
         var t=0;
@@ -157,9 +158,9 @@ var assistant = {
             assistant.friendTabInterval = setInterval(function () {
                 t += 500;
                 if (t == 4000 - offset)$('.friend-tab>div.black-tab,.back-btn,#friend-tab1').show();
-                if (t == 5000 - offset)$('#add-friend-img').css('top', '31%');
+                if (t == 5000 - offset)$('#add-friend-img').css('top', '33%');
                 if (t == 7000 - offset)$('#friend-tab2').show();
-                if (t == 8000 - offset)$('#choose-friend-img').css('top', '67%');
+                if (t == 8000 - offset)$('#choose-friend-img').css('top', '68%');
                 if (t >= 24000)
                     assistant.backClick();
             }, 500);
@@ -180,8 +181,8 @@ var assistant = {
                 if (t == 3000 - offset)$('.find-tab>div.black-tab,.back-btn,#find-tab1').show();
                 if (t == 4000 - offset)$('#find-tab-img').css('top', '81%');
                 if (t == 6000 - offset)$('#find-tab2').show();
-                if (t == 7000 - offset)$('#find-friend-img').css('top', '3%');
-                if (t == 8000 - offset)$('#watch-show-img').css('top', '43%');
+                if (t == 7000 - offset)$('#find-friend-img').css('top', '7%');
+                if (t == 8000 - offset)$('#watch-show-img').css('top', '45%');
                 if (t >= 12000)
                     assistant.backClick();
             }, 500);
@@ -245,7 +246,7 @@ var assistant = {
                 t += 1000;
                 if (t == 3000 - 2000)$('.me-tab>div.black-tab,.white-div,.back-btn').show();
                 if (t == 4000 - 2000)$('#suggestion-img').css('top', '62%');
-                if (t == 20000)
+                if (t == 19000)
                     assistant.backClick();
             }, 1000);
             assistant.intervalArray.push(assistant.groupTabInterval);
@@ -267,7 +268,7 @@ var assistant = {
     },
     circlePushed:function(){
         $('.talk-panel>.push-circle,.push-circle-connect-notspin').hide();
-        $('.talk-panel-title').text('BiBi小助手').attr('style','');
+        $('.talk-panel-title').text('BiBi豆').attr('style','');
         $('.push-circle-pushed').show();
     },
     circleConnect:function(){
@@ -284,7 +285,7 @@ var assistant = {
     circleConnected:function(){
         $('.talk-panel>.push-circle,.push-circle-connect-notspin').hide();
         $('.push-circle-tosay>.microphone-word').text('按住说话');
-        $('.talk-panel-title').text('BiBi小助手').attr('style','');
+        $('.talk-panel-title').text('BiBi豆').attr('style','');
         $('.push-circle-tosay').show();
     },
     circleSay:function(){
@@ -313,7 +314,7 @@ var assistant = {
     },
     circleRecord:function(){
         $('.talk-panel>.push-circle,.push-circle-connect-notspin').hide();
-        $('.talk-panel-title').text('BiBi小助手').css('color','black');
+        $('.talk-panel-title').text('BiBi豆').css('color','black');
         $('.talk-panel,.black-opacity,.push-circle-record').show();
     },
     circleRecording:function(){
@@ -367,7 +368,7 @@ var assistant = {
 (function(){
     window.onload = function(){
         FastClick.attach(document.body);
-        $('.word-img').css('top',document.body.offsetHeight+160);
+        $('.word-img').css('top',document.body.offsetHeight+200);
     };
     assistant.audioPlay('#bg-audio',function(){});
     $('.back-icon').fastClick(function(){

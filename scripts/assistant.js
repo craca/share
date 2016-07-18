@@ -92,19 +92,20 @@ var assistant = {
         assistant.intervalArray=[];
         assistant.timeoutArray=[];
         $('#centerBlack').css('height','30rem');//find-tab
-        $('.word-img').css('top',document.body.offsetHeight+160);
+        $('.word-img').css('top',document.body.offsetHeight+200);
         $('.back-btn').hide();
         $('.tab-panel>div .white-div,.tab-panel>div').hide();
         $('.black-tab').hide();
         $('#qunliao').hide();
         $('.record-tip').hide();
         $('.talk-panel>.push-circle,.talk-panel,.zhibo-img,.black-opacity,.tab-panel').hide();
+        $('.tab-panel img.hide').hide();
     },
     talkAnimation:function(){
         $('.push-circle-tosay .microphone-word').text('点击发起对讲');
         $('.red-point').show();
         assistant.duijiangOpen();
-        $('.talk-panel-title').text('BiBi小助手').attr('style','');
+        $('.talk-panel-title').text('BiBi豆').attr('style','');
         $('.talk-panel,.black-opacity,.push-circle-tosay').show();
         $('.back-btn').show();
         var t=0;
@@ -250,7 +251,7 @@ var assistant = {
                 t += 1000;
                 if (t == 3000 - 2000)$('.me-tab>div.black-tab,.white-div,.back-btn').show();
                 if (t == 4000 - 2000)$('#suggestion-img').css('top', '59%');
-                if (t == 20000)
+                if (t == 19000)
                     assistant.backClick();
             }, 1000);
             assistant.intervalArray.push(assistant.groupTabInterval);
@@ -272,7 +273,7 @@ var assistant = {
     },
     circlePushed:function(){
         $('.talk-panel>.push-circle,.push-circle-connect-notspin').hide();
-        $('.talk-panel-title').text('BiBi小助手').attr('style','');
+        $('.talk-panel-title').text('BiBi豆').attr('style','');
         $('.push-circle-pushed').show();
     },
     circleConnect:function(){
@@ -289,7 +290,7 @@ var assistant = {
     circleConnected:function(){
         $('.talk-panel>.push-circle,.push-circle-connect-notspin').hide();
         $('.push-circle-tosay>.microphone-word').text('按住说话');
-        $('.talk-panel-title').text('BiBi小助手').attr('style','');
+        $('.talk-panel-title').text('BiBi豆').attr('style','');
         $('.push-circle-tosay').show();
     },
     circleSay:function(){
@@ -318,7 +319,7 @@ var assistant = {
     },
     circleRecord:function(){
         $('.talk-panel>.push-circle,.push-circle-connect-notspin').hide();
-        $('.talk-panel-title').text('BiBi小助手').css('color','black');
+        $('.talk-panel-title').text('BiBi豆').css('color','black');
         $('.talk-panel,.black-opacity,.push-circle-record').show();
     },
     circleRecording:function(){
@@ -372,7 +373,7 @@ var assistant = {
 (function(){
     window.onload = function(){
         FastClick.attach(document.body);
-        $('.word-img').css('top',document.body.offsetHeight+160);
+        $('.word-img').css('top',document.body.offsetHeight+200);
     };
     assistant.audioPlay('#bg-audio',function(){});
     $('.back-icon').fastClick(function(){
