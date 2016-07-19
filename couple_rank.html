@@ -4,10 +4,62 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" type="text/css" href="styles/lib/base.css"/>
-    <link rel="stylesheet" type="text/css" href="./styles/share/assistant.css"/>
+    <link rel="stylesheet" type="text/css" href="./styles/share/coupleRank.css"/>
 </head>
 <body>
-
+    <div class="bg-up">
+        <div class="banner"></div>
+        <div class="rank-panel">
+            <div class="photo-panel">
+                <img class="photo" src="/andesres/image/andes/coupleRank/唐老鸭.png">
+                <img class="heart" src="/andesres/image/andes/coupleRank/头像心心.png">
+                <img class="photo" src="/andesres/image/andes/coupleRank/Group 6.png">
+            </div>
+            <div class="nickname-panel">
+                <div class="nickname1 fleft"></div>
+                <div class="nickname2 fright"></div>
+            </div>
+            <div class="my-rank-panel">
+                <div class="spilit"></div>
+                <div class="my-grade fleft">亲密度<br><span></span></div>
+                <div class="my-rank fright">当前排名<br><span></span></div>
+            </div>
+        </div>
+        <div class="rank-list">
+            <h4>恩爱榜</h4>
+            <div id="rankDetail1" class="rank-detail">
+                <img class="photo1 block fleft" src="/andesres/image/andes/coupleRank/photo1.png">
+                <div class="nickname fleft"></div>
+                <div class="grade fright"></div>
+            </div>
+            <div id="rankDetail2" class="rank-detail">
+                <img class="photo2 fleft" src="/andesres/image/andes/coupleRank/photo2.png">
+                <div class="nickname fleft"></div>
+                <div class="grade fright"></div>
+            </div>
+            <div id="rankDetail3" class="rank-detail">
+                <img class="photo3 fleft" src="/andesres/image/andes/coupleRank/photo3.png">
+                <div class="nickname fleft"></div>
+                <div class="grade fright"></div>
+            </div>
+        </div>
+        <div class="rule">
+            <h6>活动细则</h6>
+            <p>1. 活动时间为2016年7月20日凌晨至2016年7月31日凌晨</p>
+            <p>2. 亲密度即恋人间使用BiBi对讲产生的累计时长，不含群聊</p>
+            <p>3. 最终获得第一名的情侣将获得一套上海迪士尼门票（两张单日成人票，2016年8月9日指定票）</p>
+            <p>4. 我们将通过BiBi联系获奖用户，请保持BiBi在线</p>
+            <p>5. 其他参与我们回访的用户也有机会获得奖品</p>
+        </div>
+    </div>
+<div style="display:none">
+    <div class="rank-detail rankDetailDom">
+        <div class="rank fleft">4</div>
+        <div class="nickname fleft">男主角是我&女主角是我</div>
+        <div class="grade fright">6000</div>
+    </div>
+</div>
+    <iframe src="" class="hide" id="i"></iframe>
 </body>
 <footer>
     <script src="./scripts/vendor/zepto.v2.js"></script>
@@ -15,5 +67,8 @@
     <script src="./scripts/wechat_share.js"></script>
     <script src="./scripts/andes_ios.js"></script>
     <script src="scripts/coupleRank.js"></script>
+    <script>
+        init();
+    </script>
 </footer>
 </html>

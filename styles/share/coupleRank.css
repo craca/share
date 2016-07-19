@@ -12,3 +12,175 @@ body {
     padding: 0;
     margin: auto;
 }
+.fleft{
+    float:left;
+}
+.fright{
+    float:right;
+}
+.block{
+    display:block;
+}
+.center{
+    margin:auto
+}
+.inline{
+    display:inline-block;
+}
+.hide{
+    display:none;
+}
+.circle-radius{
+    -webkit-border-radius:10rem;
+    -moz-border-radius:10rem;
+    border-radius:10rem;
+}
+.bg-up{
+    background: -webkit-linear-gradient(rgb(70,150,237), rgb(187,93,239) 350px, rgb(17,67,191) 900px); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(rgb(70,150,237), rgb(187,93,239) 350px, rgb(17,67,191) 900px); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(rgb(70,150,237), rgb(187,93,239) 350px, rgb(17,67,191) 900px); /* Firefox 3.6 - 15 */
+    background: linear-gradient(rgb(70,150,237), rgb(187,93,239) 350px, rgb(17,67,191) 900px);
+    padding-bottom:5.5rem;
+}
+.banner{
+    background-image: url(/andesres/image/andes/coupleRank/情侣亲密度顶部banner.png);
+    background-size:100% 100%;
+    height:13.2rem;
+}
+.rank-panel{
+    background-color: rgb(255,222,92);
+    width: 11rem;
+    height: 6.8rem;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 9.3rem;
+}
+.photo{
+    width: 3rem;
+    height: 3rem;
+}
+.photo-panel{
+    margin: auto;
+    margin-top: -1.5rem;
+    text-align: center;
+}
+.heart{
+    width: 1.1rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 1.2rem;
+}
+.nickname-panel{
+    font-size:0.6rem;
+    color: rgb(188,155,27);
+    width:6rem;
+    margin:auto;
+    height:1.65rem;
+}
+.nickname1{
+    width:2.8rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+.nickname2{
+    width:2.8rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+.my-rank-panel{
+    margin:auto;
+    text-align: center;
+    width:7.2rem;
+    height:3.4rem;
+    line-height: 1.4rem;
+    background-color: rgb(255, 234, 150);
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    padding:0 1.8rem;
+    font-size:0.6rem;
+    color: rgb(161,104,57);
+    letter-spacing:-0.3px;
+}
+.spilit{
+    position: absolute;
+    height: 3.4rem;
+    width: 1px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgb(255,222,92);
+}
+.my-grade,.my-rank{
+    margin-top:0.3rem;
+}
+.my-rank{
+    margin-right: -0.4rem;
+}
+.rank-list{
+    margin-top:4rem;
+}
+h4{
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    opacity: 0.95;
+}
+.rank-list{
+
+}
+.rank-detail{
+    height: 3rem;
+    line-height: 3rem;
+    padding-left: 0.8rem;
+    padding-right: 1.5rem;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+.photo1,.photo2,.photo3{
+    width:1.5rem;
+    height:1.4rem;
+    margin-top: 0.75rem;
+}
+.rank-detail .nickname{
+    margin-left: 0.6rem;
+    width: 9rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.rank-detail .grade{
+    color: rgb(253,153,153);
+    font-size: 0.9rem;
+}
+.rank-detail .rank{
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+    margin-right: 0.6rem;
+}
+.rule{
+    margin-top:3rem;
+    color: rgb(195,150,252);
+    padding:0.7rem;
+}
+h6{
+    font-size: 0.7rem;
+    margin-bottom: 0.6rem;
+}
+.rule p{
+    font-size:0.6rem;
+    letter-spacing:-0.3px;
+    line-height:1.1rem;
+}

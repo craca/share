@@ -40,6 +40,10 @@ var assistant = {
     init:function(){
         $('.que-panel>div').fastClick(this.helpClick);
         $('.back-btn').fastClick(this.backClick);
+        var src=$('#bg-audio').data('src');
+        assistant.playUrl=src;
+        if(Andes.handler)
+            Andes.startPlayUrl(src,false,false,'');
     },
     preventDefault:function(e){
         e.preventDefault();
@@ -166,6 +170,9 @@ var assistant = {
             }, 500);
             assistant.intervalArray.push(assistant.friendTabInterval);
         };
+        img.onerror=function(){
+            Andes.showToast('当前网络不可用，请联网后再重新打开');
+        }
     },
     findTabAnimation:function(){
         var img=new Image();
@@ -188,6 +195,9 @@ var assistant = {
             }, 500);
             assistant.intervalArray.push(assistant.findTabInterval);
         };
+        img.onerror=function(){
+            Andes.showToast('当前网络不可用，请联网后再重新打开');
+        }
     },
     voiceFaceTabAnimation:function(){
         var img=new Image();
@@ -207,6 +217,9 @@ var assistant = {
             }, 1000);
             assistant.intervalArray.push(assistant.voiceFaceTabInterval);
         };
+        img.onerror=function(){
+            Andes.showToast('当前网络不可用，请联网后再重新打开');
+        }
     },
     groupTabAnimation:function(){
         var img=new Image();
@@ -215,6 +228,9 @@ var assistant = {
             img.onload = null;
             $('.group-tab').css('background-image', 'url(' + img.src + ')');
         };
+        img.onerror=function(){
+            Andes.showToast('当前网络不可用，请联网后再重新打开');
+        }
         assistant.circleConnected();
         assistant.duijiangOpen();
         $('.red-point').hide();
@@ -232,6 +248,7 @@ var assistant = {
             if(t>=19000)
                 assistant.backClick();
         },500);
+
         assistant.intervalArray.push(assistant.groupTabInterval);
     },
     meTabAnimation:function(){
@@ -251,9 +268,12 @@ var assistant = {
             }, 1000);
             assistant.intervalArray.push(assistant.groupTabInterval);
         };
+        img.onerror=function(){
+            Andes.showToast('当前网络不可用，请联网后再重新打开');
+        }
     },
     duijiangOpen:function(){
-       // $('.duijiang').removeClass('duijiang-close').addClass('duijiang-open');
+        // $('.duijiang').removeClass('duijiang-close').addClass('duijiang-open');
         $('#red').hide();
         $('#green').show();
         $('.duijiang-word').text('对讲(开)');
@@ -346,7 +366,7 @@ var assistant = {
     audioPlay:function(id,callback){
         assistant.audioStop();
         var src=$(id).data('src');
-        assistant.playUrl=src
+        assistant.playUrl=src;
         if(Andes.handler) {
             Andes.startPlayUrl(src);
             callback();
@@ -370,9 +390,13 @@ var assistant = {
         FastClick.attach(document.body);
         $('.word-img').css('top',document.body.offsetHeight+200);
     };
-    assistant.audioPlay('#bg-audio',function(){});
+    window.onblur=function(){
+        assistant.backClick();
+    };
     $('.back-icon').fastClick(function(){
         Andes.finish();
     });
-    assistant.init();
 })();
+function init(){
+    assistant.init();
+}

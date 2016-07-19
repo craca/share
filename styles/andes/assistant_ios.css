@@ -153,11 +153,29 @@ h3{
 .question-right{
     background-image: url("/andesres/image/andes/assistant/右@2x.png");
 }
-.play-icon{
+.play-icon-left{
     font-family: Andes_Icon2;
     color: #74726d;
     font-size: 0.9rem;
-    margin: 0 0.25rem;
+    position: absolute;
+    z-index:-1;
+    margin-left: 0.25rem;
+}
+.question-content-left{
+    margin-left: 1.35rem;
+    margin-right: 0.25rem;
+}
+.play-icon-right{
+    font-family: Andes_Icon2;
+    color: #74726d;
+    font-size: 0.9rem;
+    position: absolute;
+    z-index:-1;
+    right: 2.8rem;
+}
+.question-content-right{
+    margin-right: 1.35rem;
+    margin-left: 0.25rem;
 }
 /*main panel end*/
 /*tab panel block*/
@@ -200,19 +218,19 @@ h3{
     background-size:100% 100%;
 }
 /*.friend-tab{*/
-    /*background-image: url(/andesres/image/andes/assistant/iOS/问题3.1.png);*/
+/*background-image: url(/andesres/image/andes/assistant/问题3.1.png);*/
 /*}*/
 /*.find-tab{*/
-    /*background-image: url(/andesres/image/andes/assistant/iOS/问题4.1.png);*/
+/*background-image: url(/andesres/image/andes/assistant/问题4.1.png);*/
 /*}*/
 /*.voiceFace-tab{*/
-    /*background-image: url(/andesres/image/andes/assistant/iOS/问题5.1.png);*/
+/*background-image: url(/andesres/image/andes/assistant/问题5.1.png);*/
 /*}*/
 /*.group-tab{*/
-    /*background-image: url(/andesres/image/andes/assistant/iOS/问题6.1.png);*/
+/*background-image: url(/andesres/image/andes/assistant/问题6.1.png);*/
 /*}*/
 /*.me-tab{*/
-    /*background-image: url(/andesres/image/andes/assistant/iOS/问题7.1.png);*/
+/*background-image: url(/andesres/image/andes/assistant/问题7.1.png);*/
 /*}*/
 /*tab panel end*/
 /*talk panel block*/
@@ -242,15 +260,15 @@ h3{
     color: red;
     left: 1.9rem;
     font-size: 0.6rem;
-    line-height: 1.4rem;
+    line-height: 1.5rem;
 }
 .zhibo{
-    font-family: Andes_iOS1;
-    font-size: 1.3rem;
+    font-family: Andes_Icon2;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #aaa;
     position: absolute;
-    left: 2.5rem;
+    left: 2.4rem;
 }
 .zhibo-word{
     left: 2.55rem;
@@ -437,9 +455,9 @@ h3{
     border:none;
 }
 .microphone{
-    font-family: Andes_iOS2;
+    font-family: Andes_Icon1;
     line-height: 8rem;
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: #c3c3c3;
 }
 .push-circle-connect-notspin{
@@ -454,26 +472,26 @@ h3{
     margin-top: 0.9rem;
 }
 .microphone-connect{
-    font-family: Andes_iOS2;
+    font-family: Andes_Icon1;
     line-height: 8rem;
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: #c3c3c3;
     /* transform: scale(0.95); */
 
 }
 .message{
-    font-family: Andes_iOS1;
+    font-family: Andes_Icon2;
     line-height: 8rem;
     font-size: 2.5rem;
     color: #c3c3c3;
 }
 .microphone-word{
-    margin-top: -2.7rem;
+    margin-top: -2.8rem;
     font-size: 0.6rem;
     color: #b3b3b3;
 }
 .bottom-icon{
-    font-family:Andes_iOS2;
+    font-family:Andes_Icon1;
     font-size: 1.2rem;
     color: #a2a2a2;
     margin: 0 1.35rem;
@@ -547,7 +565,7 @@ h3{
     -o-transform: scale(0.9);
     transform: scale(0.9);
     color: #969696;
-    margin-bottom: 0.4rem;
+    margin-bottom:0.4rem;
 }
 .foot-panel span{
     color:#ff9700;

@@ -166,7 +166,7 @@ var assistant = {
             assistant.intervalArray.push(assistant.friendTabInterval);
         };
         img.onerror=function(){
-            alert('网络不好~');
+            Andes.showToast('当前网络不可用，请联网后再重新打开');
         }
     },
     findTabAnimation:function(){
@@ -190,6 +190,9 @@ var assistant = {
             }, 500);
             assistant.intervalArray.push(assistant.findTabInterval);
         };
+        img.onerror=function(){
+            Andes.showToast('当前网络不可用，请联网后再重新打开');
+        }
     },
     voiceFaceTabAnimation:function(){
         var img=new Image();
@@ -209,6 +212,9 @@ var assistant = {
             }, 1000);
             assistant.intervalArray.push(assistant.voiceFaceTabInterval);
         };
+        img.onerror=function(){
+            Andes.showToast('当前网络不可用，请联网后再重新打开');
+        }
     },
     groupTabAnimation:function(){
         var img=new Image();
@@ -238,6 +244,9 @@ var assistant = {
             }, 500);
             assistant.intervalArray.push(assistant.groupTabInterval);
         }
+        img.onerror=function(){
+            Andes.showToast('当前网络不可用，请联网后再重新打开');
+        }
     },
     meTabAnimation:function(){
         var img=new Image();
@@ -255,6 +264,9 @@ var assistant = {
                     assistant.backClick();
             }, 1000);
             assistant.intervalArray.push(assistant.groupTabInterval);
+        }
+        img.onerror=function(){
+            Andes.showToast('当前网络不可用，请联网后再重新打开');
         }
     },
     duijiangOpen:function(){
@@ -374,6 +386,9 @@ var assistant = {
     window.onload = function(){
         FastClick.attach(document.body);
         $('.word-img').css('top',document.body.offsetHeight+200);
+    };
+    window.onblur=function(){
+        assistant.backClick();
     };
     assistant.audioPlay('#bg-audio',function(){});
     $('.back-icon').fastClick(function(){
